@@ -9,7 +9,8 @@ namespace Foundation.AspNetCore.Business.Rendering
     {
         public const string FoundationBlockFolder = "~/Features/Blocks/";
         public const string FoundationPageFolder = "~/Features/";
-        public const string FoundationHeaderFolder = "~/Features/Shared/Views/Header/";
+        public const string FoundationSharedViewsFolder = "~/Features/Shared/Views/";
+        public const string FoundationHeaderViewsFolder = "~/Features/Shared/Views/Header/";
 
         public static void OnTemplateResolved(object sender, TemplateResolverEventArgs args)
         {

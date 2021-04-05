@@ -12,7 +12,9 @@ namespace Foundation.AspNetCore.Business.Rendering
                 TemplateCoordinator.FoundationBlockFolder + "{1}/{0}.cshtml",
                 TemplateCoordinator.FoundationPageFolder + "{0}.cshtml",
                 TemplateCoordinator.FoundationPageFolder + "{1}/{0}.cshtml",
-                TemplateCoordinator.FoundationHeaderFolder + "Views/Header/{0}.cshtml"
+                TemplateCoordinator.FoundationSharedViewsFolder + "{0}.cshtml",
+                TemplateCoordinator.FoundationSharedViewsFolder + "{1}/{0}.cshtml",
+                TemplateCoordinator.FoundationHeaderViewsFolder + "{0}.cshtml"
             };
 
         public IEnumerable<string> ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable<string> viewLocations)

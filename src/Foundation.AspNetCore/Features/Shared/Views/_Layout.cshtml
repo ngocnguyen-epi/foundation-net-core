@@ -1,0 +1,42 @@
+@using EPiServer.Framework.Web.Mvc.Html
+@using Foundation.AspNetCore.Helpers
+@model IContentViewModel<IContent>
+
+@{
+    Layout = "~/Features/Shared/Views/_MasterLayout.cshtml";
+    var foundationPageData = Model.CurrentContent as IFoundationContent;
+}
+
+@section AdditionalStyles {
+    @RenderSection("AdditionalStyles", required: false)
+}
+
+<div class="loading-box" style="display: none">
+    <div class="loader"></div>
+</div>
+
+@Html.RenderEPiServerQuickNavigatorAsync()
+
+@if (!foundationPageData?.HideSiteHeader ?? false)
+{
+    //{ Html.RenderAction("GetHeader", "Header", new { homePage = Model.StartPage }); }
+}
+else
+{
+    //Html.RenderAction("GetHeaderLogoOnly", "Header");
+}
+
+
+<div class="container">
+    @RenderBody()
+</div>
+
+@if (!foundationPageData?.HideSiteFooter ?? false)
+{
+    @*@Html.RenderPartialAsync("_Footer", Html.GetLayoutSettings())*@
+}
+
+<script src="~/js/main.min.js"></script>
+
+@RenderSection("AdditionalScripts", required: false)
+@Html.RequiredClientResources("Footer")

@@ -15,11 +15,11 @@
     <div class="loader"></div>
 </div>
 
-@Html.RenderEPiServerQuickNavigatorAsync()
+@(await Html.RenderEPiServerQuickNavigatorAsync())
 
 @if (!foundationPageData?.HideSiteHeader ?? false)
 {
-    //{ Html.RenderAction("GetHeader", "Header", new { homePage = Model.StartPage }); }
+    @(await Component.InvokeAsync("Header", new { homePage = Model.StartPage }))
 }
 else
 {

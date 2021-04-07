@@ -3,6 +3,11 @@ using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
 using Foundation.AspNetCore.Cms.Settings;
+using Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Interfaces;
+using Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Services;
+using Foundation.AspNetCore.Features.Shared.Interfaces;
+using Foundation.AspNetCore.Features.Shared.Services;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 
 namespace Foundation.AspNetCore.Infrastructure
@@ -13,6 +18,10 @@ namespace Foundation.AspNetCore.Infrastructure
     {
         public void ConfigureContainer(ServiceConfigurationContext context)
         {
+            context.Services.AddTransient<IBlogCommentRepository, FakeCommentBlogService>();
+            context.Services.AddTransient<IPageCommentRepository, FakePageCommentRepository>();
+            context.Services.AddTransient<IPageRepository, PageRepository>();
+            context.Services.AddTransient<IUserRepository, UserRepository>();
         }
 
         public void Initialize(InitializationEngine context)

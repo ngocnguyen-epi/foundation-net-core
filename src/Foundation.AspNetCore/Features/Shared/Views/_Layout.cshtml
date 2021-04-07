@@ -33,7 +33,7 @@ else
 
 @if (!foundationPageData?.HideSiteFooter ?? false)
 {
-    @*@Html.RenderPartialAsync("_Footer", Html.GetLayoutSettings())*@
+    @Html.RenderPartialAsync("_Footer", Html.GetLayoutSettings())
 }
 
 <script src="~/js/main.min.js"></script>

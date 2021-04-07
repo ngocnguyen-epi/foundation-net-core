@@ -24,7 +24,7 @@ namespace Foundation.AspNetCore.Helpers
     {
         private static readonly Lazy<ISettingsService> _settingsService =
                 new Lazy<ISettingsService>(() => ServiceLocator.Current.GetInstance<ISettingsService>());
-        public static LayoutSettings GetLayoutSettings(this HtmlHelper helper, IContent content) => _settingsService.Value.GetSiteSettings<LayoutSettings>();
+        public static LayoutSettings GetLayoutSettings(this IHtmlHelper helper) => _settingsService.Value.GetSiteSettings<LayoutSettings>();
 
         /// <summary>
         /// Returns an element for each child page of the rootLink using the itemTemplate.

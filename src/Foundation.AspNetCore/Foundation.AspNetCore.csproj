@@ -13,4 +13,16 @@
 	<ItemGroup>
 		<None Include="wwwroot\**\*.*" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\BlogCommentRepository.cs" />
+	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\PageCommentRepository.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="wwwroot\css\components\contents\_blog-list-page.scss" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Features\CmsPages\Blog\BlogCommentBlock\Interfaces\" />
+	  <Folder Include="Features\Shared\Interfaces\" />
+	  <Folder Include="Features\Shared\Services\" />
+	</ItemGroup>
 </Project>

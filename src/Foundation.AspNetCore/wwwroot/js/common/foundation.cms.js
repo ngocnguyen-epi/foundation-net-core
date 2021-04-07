@@ -6,7 +6,7 @@ import Selection from "./selection";
 import Dropdown from "./dropdown";
 import SearchBox from "../../../Features/Search/search-box";
 import ContentSearch from "../../../Features/Search/search";
-import Blog from "../../../Features/Blog/blog";
+import Blog from "../features/blog";
 import Locations from "../../../Features/Locations/locations";
 import People from "Features/People/people";
 

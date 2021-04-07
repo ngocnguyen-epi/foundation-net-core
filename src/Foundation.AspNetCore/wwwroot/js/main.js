@@ -1,10 +1,10 @@
 import "bootstrap";
-import "../scss/main.scss";
+import "../css/main.scss";
 require("easy-autocomplete");
 import feather from "feather-icons";
 import "lazysizes";
 import "lazysizes/plugins/bgset/ls.bgset";
-import FoundationCms from "Assets/js/common/foundation.cms";
+import FoundationCms from "./common/foundation.cms";
 
 feather.replace();
 window.feather = feather; 

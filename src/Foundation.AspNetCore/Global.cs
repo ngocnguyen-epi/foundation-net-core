@@ -1,4 +1,5 @@
-﻿using EPiServer.DataAnnotations;
+﻿using EPiServer.DataAbstraction;
+using EPiServer.DataAnnotations;
 using EPiServer.Security;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;

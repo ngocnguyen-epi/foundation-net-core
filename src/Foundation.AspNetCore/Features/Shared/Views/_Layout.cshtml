@@ -30,10 +30,9 @@ else
 <div class="container">
     @RenderBody()
 </div>
-
 @if (!foundationPageData?.HideSiteFooter ?? false)
 {
-    @*@Html.RenderPartialAsync("_Footer", Html.GetLayoutSettings())*@
+    @(await Html.PartialAsync("_Footer", Html.GetLayoutSettings()))
 }
 
 <script src="~/js/main.min.js"></script>

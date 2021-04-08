@@ -100,3 +100,5 @@ Alloy/App_Data/
 #appsettings
 /src/Foundation.AspNetCore/appsettings.json
 /src/Foundation.AspNetCore/appsettings.Development.json
+#appdata
+/src/Foundation.AspNetCore/App_Data

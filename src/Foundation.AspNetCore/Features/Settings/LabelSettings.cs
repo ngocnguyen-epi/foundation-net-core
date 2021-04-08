@@ -10,11 +10,11 @@ namespace Foundation.AspNetCore.Features.Settings
     public class LabelSettings : SettingsBase
     {
         [CultureSpecific]
-        [Display(Name = "My account", GroupName = Global.GroupNames.SiteLabels, Order = 10)]
+        [Display(Name = "My account", GroupName = Global.TabNames.SiteLabels, Order = 10)]
         public virtual string MyAccountLabel { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Search", GroupName = Global.GroupNames.SiteLabels, Order = 30)]
+        [Display(Name = "Search", GroupName = Global.TabNames.SiteLabels, Order = 30)]
         public virtual string SearchLabel { get; set; }
     }
 }

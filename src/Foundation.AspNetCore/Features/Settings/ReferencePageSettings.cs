@@ -13,15 +13,15 @@ namespace Foundation.AspNetCore.Features.Settings
         #region References
 
         //[AllowedTypes(typeof(ResetPasswordPage))]
-        [Display(Name = "Reset password page", GroupName = Global.GroupNames.SiteStructure, Order = 40)]
+        [Display(Name = "Reset password page", GroupName = Global.TabNames.SiteStructure, Order = 40)]
         public virtual ContentReference ResetPasswordPage { get; set; }
 
         //[AllowedTypes(typeof(MailBasePage))]
-        [Display(Name = "Reset password", GroupName = Global.GroupNames.MailTemplates, Order = 30)]
+        [Display(Name = "Reset password", GroupName = Global.TabNames.MailTemplates, Order = 30)]
         public virtual ContentReference ResetPasswordMail { get; set; }
 
         //[AllowedTypes(typeof(SearchResultPage))]
-        [Display(Name = "Search page", GroupName = Global.GroupNames.SiteStructure, Order = 10)]
+        [Display(Name = "Search page", GroupName = Global.TabNames.SiteStructure, Order = 10)]
         public virtual ContentReference SearchPage { get; set; }
 
         #endregion

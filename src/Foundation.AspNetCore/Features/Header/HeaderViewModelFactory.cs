@@ -10,7 +10,7 @@ using EPiServer.Web.Routing;
 using Foundation.AspNetCore.Cms.Extensions;
 using Foundation.AspNetCore.Cms.Settings;
 using Foundation.AspNetCore.Features.Blocks.MenuItemBlock;
-using Foundation.AspNetCore.Features.Home;
+using Foundation.AspNetCore.Features.CmsPages.Home;
 using Foundation.AspNetCore.Features.Settings;
 using Microsoft.AspNetCore.Http;
 using System;

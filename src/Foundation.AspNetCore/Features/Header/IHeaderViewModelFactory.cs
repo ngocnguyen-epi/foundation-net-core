@@ -1,5 +1,5 @@
 ﻿using EPiServer.Core;
-using Foundation.AspNetCore.Features.Home;
+using Foundation.AspNetCore.Features.CmsPages.Home;
 
 
 namespace Foundation.AspNetCore.Features.Header

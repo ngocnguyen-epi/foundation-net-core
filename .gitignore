@@ -94,3 +94,9 @@ Alloy/App_Data/
 /Quicksilver/EPiServer.Reference.Commerce.Site/wwwroot/js/script.min.js
 /Alloy/wwwroot/css/css.min.css
 /Alloy/wwwroot/js/script.min.js
+
+#Log file
+/src/Foundation.AspNetCore/log.txt
+#appsettings
+/src/Foundation.AspNetCore/appsettings.json
+/src/Foundation.AspNetCore/appsettings.Development.json

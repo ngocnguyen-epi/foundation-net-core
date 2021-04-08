@@ -16,7 +16,7 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogListPage.Models
         Description = "Blog List Page for dates such as year and month",
         GroupName = GroupNames.Blog)]
     [AvailableContentTypes(Availability.Specific, Include = new[] { typeof(BlogListPage), typeof(BlogItemPage.Models.BlogItemPage) })]
-    [ImageUrl("~/assets/icons/cms/pages/cms-icon-page-20.png")]
+    [ImageUrl("/icons/cms/pages/cms-icon-page-20.png")]
     public class BlogListPage : FoundationPageData
     {
         [Display(GroupName = SystemTabNames.Content, Order = 5)]

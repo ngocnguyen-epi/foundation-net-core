@@ -1,5 +1,5 @@
 ﻿using EPiServer.Web.Routing;
-using Foundation.AspNetCore.Features.Home;
+using Foundation.AspNetCore.Features.CmsPages.Home;
 using Foundation.AspNetCore.Infrastructure;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;

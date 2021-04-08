@@ -207,10 +207,10 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogListPage.Controllers
         private IEnumerable<PageData> FindPages(Models.BlogListPage currentPage, IContent category)
         {
             var listRoot = currentPage.Root ?? currentPage.ContentLink;
-            var blogListItemPageType = typeof(Models.BlogListPage).GetPageType();
+            var blogListItemPageType = typeof(BlogItemPage.Models.BlogItemPage).GetPageType();
             IEnumerable<PageData> pages;
 
-            pages = currentPage.IncludeAllLevels ? listRoot.FindPagesByPageType(true, blogListItemPageType.ID) : _contentLoader.GetChildren<Models.BlogListPage>(listRoot);
+            pages = currentPage.IncludeAllLevels ? listRoot.FindPagesByPageType(true, blogListItemPageType.ID) : _contentLoader.GetChildren<BlogItemPage.Models.BlogItemPage>(listRoot);
 
             // Geta Categories
 

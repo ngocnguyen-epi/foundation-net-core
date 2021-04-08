@@ -11,27 +11,27 @@
 @switch (Model.CurrentContent.Template)
 {
     case TemplateSelections.Grid:
-        @Html.Partial("View/Template/_GridTemplate", Model)
+        @await Html.PartialAsync("Template/_GridTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.Card:
-        @Html.Partial("View/Template/_CardTemplate", Model)
+        @await Html.PartialAsync("Template/_CardTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.Insight:
-        @Html.Partial("View/Template/_InsightTemplate", Model)
+        @await Html.PartialAsync("Template/_InsightTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.ImageLeft:
-        @Html.Partial("View/Template/_ImageLeftTemplate", Model)
+        @await Html.PartialAsync("Template/_ImageLeftTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.ImageTop:
-        @Html.Partial("View/Template/_ImageTopTemplate", Model)
+        @await Html.PartialAsync("Template/_ImageTopTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.NoImage:
-        @Html.Partial("View/Template/_NoImageTemplate", Model)
+        @await Html.PartialAsync("Template/_NoImageTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.Highlight:

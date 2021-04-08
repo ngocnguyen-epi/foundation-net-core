@@ -145,10 +145,10 @@ namespace Foundation.AspNetCore
         /// </summary>
         public static class ContentAreaTags
         {
-            public const string FullWidth = "span12";
-            public const string TwoThirdsWidth = "span8";
-            public const string HalfWidth = "span6";
-            public const string OneThirdWidth = "span4";
+            public const string FullWidth = "col-12";
+            public const string TwoThirdsWidth = "col-8";
+            public const string HalfWidth = "col-6";
+            public const string OneThirdWidth = "col-4";
             public const string NoRenderer = "norenderer";
         }
 

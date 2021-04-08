@@ -1,4 +1,4 @@
-﻿namespace Foundation.AspNetCore.Features.Media
+﻿namespace Foundation.AspNetCore.Features.Media.ViewModels
 {
     public class ImageMediaDataViewModel
     {

@@ -8,7 +8,7 @@ using EPiServer.Shell.ObjectEditing;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.AspNetCore.Features.Media
+namespace Foundation.AspNetCore.Features.Media.Models
 {
     [ContentType(DisplayName = "Image File",
         GUID = "20644be7-3ca1-4f84-b893-ee021b73ce6c",

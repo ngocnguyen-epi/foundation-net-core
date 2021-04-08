@@ -4,7 +4,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.Framework.Blobs;
 using EPiServer.Framework.DataAnnotations;
 
-namespace Foundation.AspNetCore.Features.Media
+namespace Foundation.AspNetCore.Features.Media.Models
 {
     [ContentType(DisplayName = "Webp Image File",
         GUID = "46652356-ef68-4ef2-b57e-293aa4f87be8",

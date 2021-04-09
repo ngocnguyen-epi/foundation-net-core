@@ -10,7 +10,7 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Models
         GUID = "656ff547-1c31-4fc1-99b9-93573d24de07",
         Description = "Configures the frontend view properties of a blog comment block",
         GroupName = GroupNames.Blog, Order = 10)]
-    [ImageUrl("~/assets/icons/cms/blocks/CMS-icon-block-25.png")]
+    [ImageUrl("/icons/cms/blocks/CMS-icon-block-25.png")]
     public class BlogCommentBlock : BlockData
     {
         [Range(0, 1000)]

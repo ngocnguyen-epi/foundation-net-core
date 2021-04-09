@@ -5,6 +5,7 @@ using EPiServer.Shell.ObjectEditing;
 using EPiServer.Web;
 using Foundation.AspNetCore;
 using Foundation.AspNetCore.Features.Shared;
+using Foundation.AspNetCore.Features.Shared.SelectionFactories;
 using Foundation.Features.People;
 using System.ComponentModel.DataAnnotations;
 

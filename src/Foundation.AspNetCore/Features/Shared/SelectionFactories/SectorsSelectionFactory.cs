@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Foundation.Features.People
+namespace Foundation.AspNetCore.Features.Shared.SelectionFactories
 {
     public class SectorsSelectionFactory : ISelectionFactory
     {

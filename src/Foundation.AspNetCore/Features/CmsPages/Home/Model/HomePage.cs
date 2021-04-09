@@ -6,7 +6,7 @@ using Foundation.AspNetCore.Cms;
 using Foundation.AspNetCore.Features.Shared;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.AspNetCore.Features.Home
+namespace Foundation.AspNetCore.Features.CmsPages.Home
 {
     [ContentType(DisplayName = "Cms Home Page",
         GUID = "452d1812-7385-42c3-8073-c1b7481e7b20",

@@ -5,7 +5,7 @@ using EPiServer.Filters;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Validation;
 using EPiServer.Web;
-using Foundation.AspNetCore.Features.Folder;
+using Foundation.AspNetCore.Features.CmsPages.Folder;
 using Foundation.AspNetCore.Features.Shared;
 using Foundation.AspNetCore.Features.Shared.SelectionFactories;
 using Newtonsoft.Json;

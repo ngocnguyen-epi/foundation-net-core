@@ -2,7 +2,7 @@
 using Foundation.AspNetCore.Features.Shared;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Foundation.AspNetCore.Features.Home
+namespace Foundation.AspNetCore.Features.CmsPages.Home
 {
     public class HomeController : PageController<HomePage>
     {

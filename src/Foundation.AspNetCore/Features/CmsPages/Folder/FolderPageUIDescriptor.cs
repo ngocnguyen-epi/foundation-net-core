@@ -1,6 +1,6 @@
 ﻿using EPiServer.Shell;
 
-namespace Foundation.AspNetCore.Features.Folder
+namespace Foundation.AspNetCore.Features.CmsPages.Folder
 {
     /// <summary>
     /// Describes how the UI should appear for <see cref="FolderPage"/> content.

@@ -4,11 +4,9 @@ using EPiServer.DataAnnotations;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Web;
 using Foundation.AspNetCore.Features.Shared;
+using Foundation.AspNetCore.Features.Shared.SelectionFactories;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 using static Foundation.AspNetCore.Global;
 
 namespace Foundation.AspNetCore.Features.StandardPage

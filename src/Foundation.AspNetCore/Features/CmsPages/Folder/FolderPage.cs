@@ -1,9 +1,9 @@
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
-using Foundation.AspNetCore.Features.Home;
+using Foundation.AspNetCore.Features.CmsPages.Home;
 
-namespace Foundation.AspNetCore.Features.Folder
+namespace Foundation.AspNetCore.Features.CmsPages.Folder
 {
     [ContentType(DisplayName = "Folder Page",
         GUID = "1bc8e78b-40cc-4efc-a561-a0bba89b51ac",

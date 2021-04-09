@@ -2,7 +2,7 @@
 using EPiServer.Core;
 using EPiServer.SpecializedProperties;
 using Foundation.AspNetCore.Features.Blocks.MenuItemBlock;
-using Foundation.AspNetCore.Features.Home;
+using Foundation.AspNetCore.Features.CmsPages.Home;
 using Foundation.AspNetCore.Features.Settings;
 using System;
 using System.Collections.Generic;

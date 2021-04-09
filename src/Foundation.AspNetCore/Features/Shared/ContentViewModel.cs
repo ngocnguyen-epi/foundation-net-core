@@ -3,7 +3,7 @@ using EPiServer.Core;
 using EPiServer.Globalization;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
-using Foundation.AspNetCore.Features.Home;
+using Foundation.AspNetCore.Features.CmsPages.Home;
 using Foundation.AspNetCore.Infrastructure;
 
 namespace Foundation.AspNetCore.Features.Shared

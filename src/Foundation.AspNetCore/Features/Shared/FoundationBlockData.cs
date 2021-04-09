@@ -15,7 +15,7 @@ namespace Foundation.AspNetCore.Features.Shared
         //public virtual IList<ContentReference> Categories { get; set; }
 
         [SelectOne(SelectionFactoryType = typeof(PaddingSelectionFactory))]
-        [Display(Name = "Padding", GroupName = Global.GroupNames.BlockStyling, Order = 1)]
+        [Display(Name = "Padding", GroupName = Global.TabNames.BlockStyling, Order = 1)]
         public virtual string Padding
         {
             get { return this.GetPropertyValue(page => page.Padding) ?? "p-0"; }
@@ -23,14 +23,14 @@ namespace Foundation.AspNetCore.Features.Shared
         }
 
         [SelectOne(SelectionFactoryType = typeof(MarginSelectionFactory))]
-        [Display(Name = "Margin", GroupName = Global.GroupNames.BlockStyling, Order = 2)]
+        [Display(Name = "Margin", GroupName = Global.TabNames.BlockStyling, Order = 2)]
         public virtual string Margin
         {
             get { return this.GetPropertyValue(page => page.Margin) ?? "m-0"; }
             set { this.SetPropertyValue(page => page.Margin, value); }
         }
 
-        [Display(Name = "Background color", GroupName = Global.GroupNames.BlockStyling, Order = 3)]
+        [Display(Name = "Background color", GroupName = Global.TabNames.BlockStyling, Order = 3)]
         [ClientEditor(ClientEditingClass = "foundation/editors/ColorPicker")]
         public virtual string BackgroundColor
         {
@@ -39,7 +39,7 @@ namespace Foundation.AspNetCore.Features.Shared
         }
 
         [Range(0, 1.0, ErrorMessage = "Opacity only allows value between 0 and 1")]
-        [Display(Name = "Block opacity (0 to 1)", GroupName = Global.GroupNames.BlockStyling, Order = 4)]
+        [Display(Name = "Block opacity (0 to 1)", GroupName = Global.TabNames.BlockStyling, Order = 4)]
         public virtual double? BlockOpacity
         {
             get { return this.GetPropertyValue(page => page.BlockOpacity) ?? 1; }

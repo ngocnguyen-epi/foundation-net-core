@@ -38,7 +38,7 @@ namespace Foundation.AspNetCore.Features.Shared
         #region Metadata
 
         [CultureSpecific]
-        [Display(Name = "Title", GroupName = Global.GroupNames.MetaData, Order = 100)]
+        [Display(Name = "Title", GroupName = Global.TabNames.MetaData, Order = 100)]
         public virtual string MetaTitle
         {
             get
@@ -54,28 +54,28 @@ namespace Foundation.AspNetCore.Features.Shared
 
         [CultureSpecific]
         [UIHint(UIHint.Textarea)]
-        [Display(GroupName = Global.GroupNames.MetaData, Order = 200)]
+        [Display(GroupName = Global.TabNames.MetaData, Order = 200)]
         public virtual string Keywords { get; set; }
 
         [CultureSpecific]
         [UIHint(UIHint.Textarea)]
-        [Display(Name = "Page description", GroupName = Global.GroupNames.MetaData, Order = 300)]
+        [Display(Name = "Page description", GroupName = Global.TabNames.MetaData, Order = 300)]
         public virtual string PageDescription { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Content type", GroupName = Global.GroupNames.MetaData, Order = 310)]
+        [Display(Name = "Content type", GroupName = Global.TabNames.MetaData, Order = 310)]
         public virtual string MetaContentType { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Industry", GroupName = Global.GroupNames.MetaData, Order = 320)]
+        [Display(Name = "Industry", GroupName = Global.TabNames.MetaData, Order = 320)]
         public virtual string Industry { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Author", GroupName = Global.GroupNames.MetaData, Order = 320)]
+        [Display(Name = "Author", GroupName = Global.TabNames.MetaData, Order = 320)]
         public virtual string AuthorMetaData { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Disable indexing", GroupName = Global.GroupNames.MetaData, Order = 400)]
+        [Display(Name = "Disable indexing", GroupName = Global.TabNames.MetaData, Order = 400)]
         public virtual bool DisableIndexing { get; set; }
 
         #endregion
@@ -108,21 +108,21 @@ namespace Foundation.AspNetCore.Features.Shared
         [CultureSpecific]
         [Searchable(false)]
         [SelectOne(SelectionFactoryType = typeof(BlockRatioSelectionFactory))]
-        [Display(Name = "Teaser ratio (width-height)", GroupName = Global.GroupNames.Teaser, Order = 50)]
+        [Display(Name = "Teaser ratio (width-height)", GroupName = Global.TabNames.Teaser, Order = 50)]
         public virtual string TeaserRatio { get; set; }
 
         [UIHint(UIHint.Image)]
-        [Display(Name = "Image", GroupName = Global.GroupNames.Teaser, Order = 100)]
+        [Display(Name = "Image", GroupName = Global.TabNames.Teaser, Order = 100)]
         public virtual ContentReference PageImage { get; set; }
 
         [CultureSpecific]
         [UIHint(UIHint.Video)]
-        [Display(Name = "Video", GroupName = Global.GroupNames.Teaser, Order = 200)]
+        [Display(Name = "Video", GroupName = Global.TabNames.Teaser, Order = 200)]
         public virtual ContentReference TeaserVideo { get; set; }
 
         [CultureSpecific]
         [UIHint(UIHint.Textarea)]
-        [Display(Name = "Text", GroupName = Global.GroupNames.Teaser, Order = 300)]
+        [Display(Name = "Text", GroupName = Global.TabNames.Teaser, Order = 300)]
         public virtual string TeaserText
         {
             get
@@ -140,45 +140,45 @@ namespace Foundation.AspNetCore.Features.Shared
         [CultureSpecific]
         [Searchable(false)]
         [SelectOne(SelectionFactoryType = typeof(TeaserTextAlignmentSelectionFactory))]
-        [Display(Name = "Text alignment", GroupName = Global.GroupNames.Teaser, Order = 400)]
+        [Display(Name = "Text alignment", GroupName = Global.TabNames.Teaser, Order = 400)]
         public virtual string TeaserTextAlignment { get; set; }
 
         [CultureSpecific]
         [Searchable(false)]
         [SelectOne(SelectionFactoryType = typeof(TeaserColorThemeSelectionFactory))]
-        [Display(Name = "Color theme", GroupName = Global.GroupNames.Teaser, Order = 500)]
+        [Display(Name = "Color theme", GroupName = Global.TabNames.Teaser, Order = 500)]
         public virtual string TeaserColorTheme { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Button label", GroupName = Global.GroupNames.Teaser, Order = 600)]
+        [Display(Name = "Button label", GroupName = Global.TabNames.Teaser, Order = 600)]
         public virtual string TeaserButtonText { get; set; }
 
         [CultureSpecific]
         [Searchable(false)]
         [SelectOne(SelectionFactoryType = typeof(ButtonBlockStyleSelectionFactory))]
-        [Display(Name = "Button theme", GroupName = Global.GroupNames.Teaser, Order = 700)]
+        [Display(Name = "Button theme", GroupName = Global.TabNames.Teaser, Order = 700)]
         public virtual string TeaserButtonStyle { get; set; }
 
         [CultureSpecific]
         [Searchable(false)]
         [SelectOne(SelectionFactoryType = typeof(ButtonBackgroundColorSelectionFactory))]
-        [Display(Name = "Button color", GroupName = Global.GroupNames.Teaser, Order = 700)]
+        [Display(Name = "Button color", GroupName = Global.TabNames.Teaser, Order = 700)]
         public virtual string TeaserButtonColor { get; set; }
 
         [CultureSpecific]
         [Searchable(false)]
         [SelectOne(SelectionFactoryType = typeof(ButtonTextSelectionFactory))]
-        [Display(Name = "Button text color", GroupName = Global.GroupNames.Teaser, Order = 700)]
+        [Display(Name = "Button text color", GroupName = Global.TabNames.Teaser, Order = 700)]
         public virtual string TeaserButtonTextColor { get; set; }
 
         [CultureSpecific]
         [Searchable(false)]
-        [Display(Name = "Display hover effect", GroupName = Global.GroupNames.Teaser, Order = 800)]
+        [Display(Name = "Display hover effect", GroupName = Global.TabNames.Teaser, Order = 800)]
         public virtual bool ApplyHoverEffect { get; set; }
 
         [Searchable(false)]
         [SelectOne(SelectionFactoryType = typeof(PaddingSelectionFactory))]
-        [Display(Name = "Padding", GroupName = Global.GroupNames.Teaser, Order = 900)]
+        [Display(Name = "Padding", GroupName = Global.TabNames.Teaser, Order = 900)]
         public virtual string Padding
         {
             get { return this.GetPropertyValue(teaser => teaser.Padding) ?? "p-0"; }
@@ -187,7 +187,7 @@ namespace Foundation.AspNetCore.Features.Shared
 
         [Searchable(false)]
         [SelectOne(SelectionFactoryType = typeof(MarginSelectionFactory))]
-        [Display(Name = "Margin", GroupName = Global.GroupNames.Teaser, Order = 910)]
+        [Display(Name = "Margin", GroupName = Global.TabNames.Teaser, Order = 910)]
         public virtual string Margin
         {
             get { return this.GetPropertyValue(teaser => teaser.Margin) ?? "m-0"; }
@@ -247,10 +247,10 @@ namespace Foundation.AspNetCore.Features.Shared
 
         #region Styles
 
-        [Display(Name = "CSS files", GroupName = Global.GroupNames.Styles, Order = 100)]
+        [Display(Name = "CSS files", GroupName = Global.TabNames.Styles, Order = 100)]
         public virtual LinkItemCollection CssFiles { get; set; }
 
-        [Display(Name = "CSS", GroupName = Global.GroupNames.Styles, Order = 200)]
+        [Display(Name = "CSS", GroupName = Global.TabNames.Styles, Order = 200)]
         [UIHint(UIHint.Textarea)]
         public virtual string Css { get; set; }
 
@@ -258,11 +258,11 @@ namespace Foundation.AspNetCore.Features.Shared
 
         #region Scripts
 
-        [Display(Name = "Script files", GroupName = Global.GroupNames.Scripts, Order = 100)]
+        [Display(Name = "Script files", GroupName = Global.TabNames.Scripts, Order = 100)]
         public virtual LinkItemCollection ScriptFiles { get; set; }
 
         [UIHint(UIHint.Textarea)]
-        [Display(GroupName = Global.GroupNames.Scripts, Order = 200)]
+        [Display(GroupName = Global.TabNames.Scripts, Order = 200)]
         public virtual string Scripts { get; set; }
 
         #endregion

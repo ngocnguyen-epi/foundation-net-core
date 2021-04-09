@@ -8,7 +8,7 @@ using EPiServer.Shell.ObjectEditing;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.AspNetCore.Features.Media
+namespace Foundation.AspNetCore.Features.Media.Models
 {
     [ContentType(DisplayName = "Image File",
         GUID = "20644be7-3ca1-4f84-b893-ee021b73ce6c",
@@ -94,19 +94,19 @@ namespace Foundation.AspNetCore.Features.Media
         public virtual string Copyright { get; set; }
 
         [SelectOne(SelectionFactoryType = typeof(ImageMediaDataAlignmentSelectionFactory))]
-        [Display(Name = "Image alignment", GroupName = Global.GroupNames.BlockStyling, Order = 10)]
+        [Display(Name = "Image alignment", GroupName = Global.TabNames.BlockStyling, Order = 10)]
         public virtual string ImageAlignment { get; set; }
 
-        [Display(Name = "Padding top", GroupName = Global.GroupNames.BlockStyling, Order = 20)]
+        [Display(Name = "Padding top", GroupName = Global.TabNames.BlockStyling, Order = 20)]
         public virtual int PaddingTop { get; set; }
 
-        [Display(Name = "Padding right", GroupName = Global.GroupNames.BlockStyling, Order = 21)]
+        [Display(Name = "Padding right", GroupName = Global.TabNames.BlockStyling, Order = 21)]
         public virtual int PaddingRight { get; set; }
 
-        [Display(Name = "Padding bottom", GroupName = Global.GroupNames.BlockStyling, Order = 22)]
+        [Display(Name = "Padding bottom", GroupName = Global.TabNames.BlockStyling, Order = 22)]
         public virtual int PaddingBottom { get; set; }
 
-        [Display(Name = "Padding left", GroupName = Global.GroupNames.BlockStyling, Order = 23)]
+        [Display(Name = "Padding left", GroupName = Global.TabNames.BlockStyling, Order = 23)]
         public virtual int PaddingLeft { get; set; }
 
         public string PaddingStyles

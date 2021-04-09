@@ -18,126 +18,119 @@ namespace Foundation.AspNetCore
         [GroupDefinitions()]
         public static class GroupNames
         {
-            [Display(Name = "Contact", Order = 1)]
-            public const string Contact = "Contact";
-
-            [Display(Name = "Default", Order = 2)]
-            public const string Default = "Default";
-
-            [Display(Name = "Metadata", Order = 3)]
-            public const string MetaData = "Metadata";
-
-            [Display(Name = "News", Order = 4)]
-            public const string News = "News";
-
-            [Display(Name = "Products", Order = 5)]
-            public const string Products = "Products";
-
-            [Display(Name = "Site Settings", Order = 6)]
-            public const string SiteSettings = "SiteSettings";
-
-            [Display(Name = "Specialized", Order = 7)]
-            public const string Specialized = "Specialized";
-
-            [Display(Name = "Content", Order = 8)]
+            [Display(Name = "Content", Order = 510)]
             public const string Content = "Content";
 
-            [Display(Name = "Account", Order = 9)]
+            [Display(Order = 530)]
             public const string Account = "Account";
 
-            [Display(Name = "Blog", Order = 10)]
+            [Display(Order = 540)]
             public const string Blog = "Blog";
 
-            [Display(Name = "Calendar", Order = 11)]
+            [Display(Name = "Calendar", Order = 550)]
             public const string Calendar = "Calendar";
 
-            [Display(Name = "Forms", Order = 12)]
+            [Display(Order = 570)]
             public const string Forms = "Forms";
 
-            [Display(Name = "Multimedia", Order = 13)]
+            [Display(Order = 580)]
             public const string Multimedia = "Multimedia";
 
-            [Display(Name = "Social media", Order = 14)]
+            [Display(Order = 600)]
             public const string SocialMedia = "Social media";
 
-            [Display(Name = "Syndication", Order = 15)]
+            [Display(Order = 620)]
             public const string Syndication = "Syndication";
+        }
 
-            [Display(Name = "Blog list", Order = 16)]
+        [GroupDefinitions]
+        public static class TabNames
+        {
+            [Display(Order = 10)]
+            public const string Default = "Default";
+
+            [Display(Name = "Blog list", Order = 30)]
             public const string BlogList = "BlogList";
 
-            [Display(Name = "Review", Order = 17)]
+            [Display(Order = 40)]
             public const string Review = "Review";
 
-            [Display(Name = "Header", Order = 18)]
+            [Display(Order = 50)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string Header = "Header";
 
-            [Display(Name = "Footer", Order = 19)]
+            [Display(Order = 60)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string Footer = "Footer";
 
-            [Display(Name = "Search settings", Order = 20)]
+            [Display(Name = "Search settings", Order = 65)]
             public const string SearchSettings = "SearchSettings";
 
-            [Display(Name = "Menu", Order = 21)]
+            [Display(Order = 70)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string Menu = "Menu";
 
-            [Display(Name = "Site labels", Order = 22)]
+            [Display(Name = "Site labels", Order = 75)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string SiteLabels = "SiteLabels";
 
-            [Display(Name = "Manufacturer", Order = 23)]
+            [Display(Order = 76)]
             public const string Manufacturer = "Manufacturer";
 
-            [Display(Name = "Site structure", Order = 24)]
+            [Display(Name = "Site structure", Order = 77)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string SiteStructure = "SiteStructure";
 
-            [Display(Name = "Mail templates", Order = 25)]
+            [Display(Name = "Mail templates", Order = 78)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string MailTemplates = "MailTemplates";
 
-            [Display(Name = "Archives", Order = 26)]
+            [Display(Order = 80)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string Archives = "Archives";
 
-            [Display(Name = "Tags", Order = 27)]
+            [Display(Order = 90)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string Tags = "Tags";
 
-            [Display(Name = "Location", Order = 28)]
+            [Display(Order = 100)]
             public const string Location = "Location";
 
-            [Display(Name = "Person", Order = 29)]
+            [Display(Order = 200)]
             public const string Person = "Person";
 
-            [Display(Name = "Teaser", Order = 30)]
+            [Display(Order = 250)]
             public const string Teaser = "Teaser";
 
-            [Display(Name = "Custom settings", Order = 31)]
+            [Display(Order = 260)]
+            [RequiredAccess(AccessLevel.Edit)]
+            public const string MetaData = "Metadata";
+
+            [Display(Name = "Custom settings", Order = 265)]
             public const string CustomSettings = "CustomSettings";
 
-            [Display(Name = "Styles", Order = 32)]
+            [Display(Order = 270)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string Styles = "Styles";
 
-            [Display(Name = "Scripts", Order = 33)]
+            [Display(Order = 280)]
             [RequiredAccess(AccessLevel.Edit)]
             public const string Scripts = "Scripts";
 
-            [Display(Name = "Background", Order = 34)]
+            [Display(Name = "Background", Order = 283)]
             public const string Background = "Background";
 
-            [Display(Name = "Border", Order = 35)]
+            [Display(Name = "Border", Order = 284)]
             public const string Border = "Border";
 
-            [Display(Name = "Block styling", Order = 36)]
+            [Display(Name = "Block styling", Order = 285)]
             public const string BlockStyling = "BlockStyling";
 
-            [Display(Name = "Colors", Order = 37)]
+            [Display(Name = "Colors", Order = 289)]
             public const string Colors = "Colors";
+
+            [Display(Name = "Settings", Order = 290)]
+            public const string Settings = SystemTabNames.Settings;
         }
 
         /// <summary>

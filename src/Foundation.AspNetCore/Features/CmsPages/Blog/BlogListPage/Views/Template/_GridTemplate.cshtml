@@ -28,7 +28,7 @@
     <div class="blog__gallery">
         <div class="blog__row">
             <div class="blog__large-col">
-                @Html.Partial("View/Template/_GridTemplateComponent", firstBlog)
+                @await Html.PartialAsync("_GridTemplateComponent.cshtml", firstBlog)
             </div>
             @foreach (var list in listGridBlogs)
             {
@@ -36,7 +36,7 @@
                     <div class="blog__grid">
                         @foreach (var blog in list)
                         {
-                            @Html.Partial("View/Template/_GridTemplateComponent", blog)
+                            @await Html.PartialAsync("_GridTemplateComponent.cshtml", blog)
                         }
                     </div>
                 </div>
@@ -44,7 +44,7 @@
             @foreach (var blog in listLargeBlogs)
             {
                 <div class="blog__large-col">
-                    @Html.Partial("View/Template/_GridTemplateComponent", blog)
+                    @await Html.PartialAsync("_GridTemplateComponent.cshtml", blog)
                 </div>
             }
         </div>

@@ -19,42 +19,42 @@ namespace Foundation.AspNetCore.Features.Settings
     {
         #region Footer
 
-        [Display(Name = "Introduction", GroupName = Global.GroupNames.Footer, Order = 10)]
+        [Display(Name = "Introduction", GroupName = Global.TabNames.Footer, Order = 10)]
         public virtual string Introduction { get; set; }
 
-        [Display(Name = "Company header", GroupName = Global.GroupNames.Footer, Order = 20)]
+        [Display(Name = "Company header", GroupName = Global.TabNames.Footer, Order = 20)]
         public virtual string CompanyHeader { get; set; }
 
-        [Display(Name = "Company name", GroupName = Global.GroupNames.Footer, Order = 25)]
+        [Display(Name = "Company name", GroupName = Global.TabNames.Footer, Order = 25)]
         public virtual string CompanyName { get; set; }
 
-        [Display(Name = "Comapny address", GroupName = Global.GroupNames.Footer, Order = 30)]
+        [Display(Name = "Comapny address", GroupName = Global.TabNames.Footer, Order = 30)]
         public virtual string CompanyAddress { get; set; }
 
-        [Display(Name = "Company phone", GroupName = Global.GroupNames.Footer, Order = 40)]
+        [Display(Name = "Company phone", GroupName = Global.TabNames.Footer, Order = 40)]
         public virtual string CompanyPhone { get; set; }
 
-        [Display(Name = "Company email", GroupName = Global.GroupNames.Footer, Order = 50)]
+        [Display(Name = "Company email", GroupName = Global.TabNames.Footer, Order = 50)]
         public virtual string CompanyEmail { get; set; }
 
-        [Display(Name = "Links header", GroupName = Global.GroupNames.Footer, Order = 60)]
+        [Display(Name = "Links header", GroupName = Global.TabNames.Footer, Order = 60)]
         public virtual string LinksHeader { get; set; }
 
         [UIHint("FooterColumnNavigation")]
-        [Display(Name = "Links", GroupName = Global.GroupNames.Footer, Order = 70)]
+        [Display(Name = "Links", GroupName = Global.TabNames.Footer, Order = 70)]
         public virtual LinkItemCollection Links { get; set; }
 
-        [Display(Name = "Social header", GroupName = Global.GroupNames.Footer, Order = 80)]
+        [Display(Name = "Social header", GroupName = Global.TabNames.Footer, Order = 80)]
         public virtual string SocialHeader { get; set; }
 
-        [Display(Name = "Social links", GroupName = Global.GroupNames.Footer, Order = 85)]
+        [Display(Name = "Social links", GroupName = Global.TabNames.Footer, Order = 85)]
         public virtual LinkItemCollection SocialLinks { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Content area", GroupName = Global.GroupNames.Footer, Order = 90)]
+        [Display(Name = "Content area", GroupName = Global.TabNames.Footer, Order = 90)]
         public virtual ContentArea ContentArea { get; set; }
 
-        [Display(Name = "Copyright", GroupName = Global.GroupNames.Footer, Order = 130)]
+        [Display(Name = "Copyright", GroupName = Global.TabNames.Footer, Order = 130)]
         public virtual string FooterCopyrightText { get; set; }
 
         #endregion
@@ -64,12 +64,12 @@ namespace Foundation.AspNetCore.Features.Settings
         [CultureSpecific]
         //[AllowedTypes(new[] { typeof(MenuItemBlock), typeof(PageData) })]
         //[UIHint("HideContentAreaActionsContainer", PresentationLayer.Edit)]
-        [Display(Name = "Main menu", GroupName = Global.GroupNames.Menu, Order = 10)]
+        [Display(Name = "Main menu", GroupName = Global.TabNames.Menu, Order = 10)]
         public virtual ContentArea MainMenu { get; set; }
 
         [CultureSpecific]
         [Display(Name = "My account menu",
-            GroupName = Global.GroupNames.Menu,
+            GroupName = Global.TabNames.Menu,
             Order = 40)]
         public virtual LinkItemCollection MyAccountCmsMenu { get; set; }
 
@@ -79,31 +79,31 @@ namespace Foundation.AspNetCore.Features.Settings
 
         [CultureSpecific]
         [UIHint(UIHint.Image)]
-        [Display(Name = "Site logo", GroupName = Global.GroupNames.Header, Order = 10)]
+        [Display(Name = "Site logo", GroupName = Global.TabNames.Header, Order = 10)]
         public virtual ContentReference SiteLogo { get; set; }
 
-        [Display(Name = "Logo height (pixels)", GroupName = Global.GroupNames.Header, Order = 15)]
+        [Display(Name = "Logo height (pixels)", GroupName = Global.TabNames.Header, Order = 15)]
         public virtual int LogoHeight { get; set; }
 
         [SelectOne(SelectionFactoryType = typeof(BackgroundColorSelectionFactory))]
-        [Display(Name = "Header Background Color", GroupName = Global.GroupNames.Header, Order = 15)]
+        [Display(Name = "Header Background Color", GroupName = Global.TabNames.Header, Order = 15)]
         public virtual string HeaderBackgroundColor { get; set; }
 
         [CultureSpecific]
         [SelectOne(SelectionFactoryType = typeof(HeaderMenuSelectionFactory))]
-        [Display(Name = "Menu style", GroupName = Global.GroupNames.Header, Order = 30)]
+        [Display(Name = "Menu style", GroupName = Global.TabNames.Header, Order = 30)]
         public virtual string HeaderMenuStyle { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Large header menu", GroupName = Global.GroupNames.Header, Order = 35)]
+        [Display(Name = "Large header menu", GroupName = Global.TabNames.Header, Order = 35)]
         public virtual bool LargeHeaderMenu { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Sticky header", GroupName = Global.GroupNames.Header, Order = 50)]
+        [Display(Name = "Sticky header", GroupName = Global.TabNames.Header, Order = 50)]
         public virtual bool StickyTopHeader { get; set; }
 
         [CultureSpecific]
-        [Display(Name = "Banner text", GroupName = Global.GroupNames.Header, Order = 20)]
+        [Display(Name = "Banner text", GroupName = Global.TabNames.Header, Order = 20)]
         public virtual XhtmlString BannerText { get; set; }
 
         #endregion

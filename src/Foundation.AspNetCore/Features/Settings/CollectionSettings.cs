@@ -21,12 +21,12 @@ namespace Foundation.AspNetCore.Features.Settings
         #region Person settings
 
         [CultureSpecific]
-        [Display(GroupName = Global.GroupNames.CustomSettings, Order = 100)]
+        [Display(GroupName = Global.TabNames.CustomSettings, Order = 100)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<SelectionItem>))]
         public virtual IList<SelectionItem> Sectors { get; set; }
 
         [CultureSpecific]
-        [Display(GroupName = Global.GroupNames.CustomSettings, Order = 200)]
+        [Display(GroupName = Global.TabNames.CustomSettings, Order = 200)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<SelectionItem>))]
         public virtual IList<SelectionItem> Locations { get; set; }
 
@@ -34,39 +34,39 @@ namespace Foundation.AspNetCore.Features.Settings
 
         #region Color settings
 
-        [Display(Name = "Background colors", GroupName = Global.GroupNames.Colors, Order = 10)]
+        [Display(Name = "Background colors", GroupName = Global.TabNames.Colors, Order = 10)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<ColorModel>))]
         public virtual IList<ColorModel> BackgroundColor { get; set; }
 
-        [Display(Name = "Heading colors", GroupName = Global.GroupNames.Colors, Order = 20)]
+        [Display(Name = "Heading colors", GroupName = Global.TabNames.Colors, Order = 20)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<ColorModel>))]
         public virtual IList<ColorModel> HeadingColor { get; set; }
 
-        [Display(Name = "Text colors", GroupName = Global.GroupNames.Colors, Order = 30)]
+        [Display(Name = "Text colors", GroupName = Global.TabNames.Colors, Order = 30)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<ColorModel>))]
         public virtual IList<ColorModel> TextColor { get; set; }
 
-        [Display(Name = "Block opacity background colors", GroupName = Global.GroupNames.Colors, Order = 40)]
+        [Display(Name = "Block opacity background colors", GroupName = Global.TabNames.Colors, Order = 40)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<ColorModel>))]
         public virtual IList<ColorModel> OpacityBackgrounColor { get; set; }
 
-        [Display(Name = "Button background colors", GroupName = Global.GroupNames.Colors, Order = 50)]
+        [Display(Name = "Button background colors", GroupName = Global.TabNames.Colors, Order = 50)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<ColorModel>))]
         public virtual IList<ColorModel> ButtonBackgroundColor { get; set; }
 
-        [Display(Name = "Button text colors", GroupName = Global.GroupNames.Colors, Order = 60)]
+        [Display(Name = "Button text colors", GroupName = Global.TabNames.Colors, Order = 60)]
         [EditorDescriptor(EditorDescriptorType = typeof(CollectionEditorDescriptor<ColorModel>))]
         public virtual IList<ColorModel> ButtonTextColor { get; set; }
 
-        [Display(Name = "Banner background color", GroupName = Global.GroupNames.Colors, Order = 60)]
+        [Display(Name = "Banner background color", GroupName = Global.TabNames.Colors, Order = 60)]
         [ClientEditor(ClientEditingClass = "foundation/editors/ColorPicker")]
         public virtual string BannerBackgroundColor { get; set; }
 
-        [Display(Name = "Banner text color", GroupName = Global.GroupNames.Colors, Order = 70)]
+        [Display(Name = "Banner text color", GroupName = Global.TabNames.Colors, Order = 70)]
         [ClientEditor(ClientEditingClass = "foundation/editors/ColorPicker")]
         public virtual string BannerTextColor { get; set; }
 
-        [Display(Name = "Link color", GroupName = Global.GroupNames.Colors, Order = 80)]
+        [Display(Name = "Link color", GroupName = Global.TabNames.Colors, Order = 80)]
         [ClientEditor(ClientEditingClass = "foundation/editors/ColorPicker")]
         public virtual string LinkColor { get; set; }
 

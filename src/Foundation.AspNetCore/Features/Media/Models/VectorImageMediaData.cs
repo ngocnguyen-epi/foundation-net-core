@@ -3,7 +3,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.Framework.Blobs;
 using EPiServer.Framework.DataAnnotations;
 
-namespace Foundation.AspNetCore.Features.Media
+namespace Foundation.AspNetCore.Features.Media.Models
 {
     [ContentType(DisplayName = "Vector Image File",
         GUID = "3bedeaa0-67ba-4f6a-a420-dabf6ad6890b",

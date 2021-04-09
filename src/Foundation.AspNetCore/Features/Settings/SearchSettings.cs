@@ -13,7 +13,7 @@ namespace Foundation.AspNetCore.Features.Settings
     {
         [CultureSpecific]
         [SelectOne(SelectionFactoryType = typeof(SearchOptionSelectionFactory))]
-        [Display(Name = "Search option", GroupName = Global.GroupNames.SearchSettings, Order = 50)]
+        [Display(Name = "Search option", GroupName = Global.TabNames.SearchSettings, Order = 50)]
         public virtual string SearchOption { get; set; }
     }
 

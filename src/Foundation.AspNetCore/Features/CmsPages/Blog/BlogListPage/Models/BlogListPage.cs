@@ -22,22 +22,22 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogListPage.Models
         [Display(GroupName = SystemTabNames.Content, Order = 5)]
         public virtual string Heading { get; set; }
 
-        [Display(GroupName = GroupNames.BlogList, Order = 10)]
+        [Display(GroupName = TabNames.BlogList, Order = 10)]
         public virtual PageReference Root { get; set; }
 
-        [Display(Name = "Include all levels", GroupName = GroupNames.BlogList, Order = 20)]
+        [Display(Name = "Include all levels", GroupName = TabNames.BlogList, Order = 20)]
         public virtual bool IncludeAllLevels { get; set; }
 
         [UIHint("SortOrder")]
         [BackingType(typeof(PropertyNumber))]
         [DefaultValue(FilterSortOrder.PublishedDescending)]
-        [Display(Name = "Sort order", GroupName = GroupNames.BlogList, Order = 30)]
+        [Display(Name = "Sort order", GroupName = TabNames.BlogList, Order = 30)]
         public virtual FilterSortOrder SortOrder { get; set; }
 
-        [Display(Name = "Include publish date", GroupName = GroupNames.BlogList, Order = 40)]
+        [Display(Name = "Include publish date", GroupName = TabNames.BlogList, Order = 40)]
         public virtual bool IncludePublishDate { get; set; }
 
-        [Display(Name = "Include teaser text", GroupName = GroupNames.BlogList, Order = 50)]
+        [Display(Name = "Include teaser text", GroupName = TabNames.BlogList, Order = 50)]
         public virtual bool IncludeTeaserText { get; set; }
 
         // Geta Categories
@@ -50,19 +50,19 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogListPage.Models
         //    Order = 70)]
         //public virtual IList<ContentReference> CategoryListFilter { get; set; }
 
-        [Display(Name = "Template of blogs listing", GroupName = GroupNames.BlogList, Order = 80)]
+        [Display(Name = "Template of blogs listing", GroupName = TabNames.BlogList, Order = 80)]
         [SelectOne(SelectionFactoryType = typeof(TemplateListSelectionFactory))]
         public virtual string Template { get; set; }
 
-        [Display(Name = "Preview option (only available in the 'Image on the top' template)", GroupName = GroupNames.BlogList, Order = 90)]
+        [Display(Name = "Preview option (only available in the 'Image on the top' template)", GroupName = TabNames.BlogList, Order = 90)]
         [SelectOne(SelectionFactoryType = typeof(PreviewOptionSelectionFactory))]
         public virtual string PreviewOption { get; set; }
 
-        [Display(Name = "Overlay color (hex or rgba)", Description = "Apply for Card template", GroupName = GroupNames.BlogList, Order = 100)]
+        [Display(Name = "Overlay color (hex or rgba)", Description = "Apply for Card template", GroupName = TabNames.BlogList, Order = 100)]
         [ClientEditor(ClientEditingClass = "foundation/editors/ColorPicker")]
         public virtual string OverlayColor { get; set; }
 
-        [Display(Name = "Overlay text color (hex or rgba)", Description = "Apply for Card template", GroupName = GroupNames.BlogList, Order = 110)]
+        [Display(Name = "Overlay text color (hex or rgba)", Description = "Apply for Card template", GroupName = TabNames.BlogList, Order = 110)]
         [ClientEditor(ClientEditingClass = "foundation/editors/ColorPicker")]
         public virtual string OverlayTextColor { get; set; }
 

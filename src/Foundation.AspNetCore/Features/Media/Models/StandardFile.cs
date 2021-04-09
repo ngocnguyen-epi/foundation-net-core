@@ -3,7 +3,7 @@ using EPiServer.DataAnnotations;
 using EPiServer.Framework.DataAnnotations;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.AspNetCore.Features.Media
+namespace Foundation.AspNetCore.Features.Media.Models
 {
     [ContentType(DisplayName = "Standard File", GUID = "646ECE50-3CE7-4F8B-BA33-9924C9ADC9C6", Description = "Used for standard file types such as Word, Excel, PowerPoint or text documents.")]
     [MediaDescriptor(ExtensionString = "txt,doc,docx,xls,xlsx,ppt,pptx")]

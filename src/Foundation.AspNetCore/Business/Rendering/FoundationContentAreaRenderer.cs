@@ -28,15 +28,15 @@ namespace Foundation.AspNetCore.Business.Rendering
         {
             if (string.IsNullOrEmpty(tagName))
             {
-                return "";
+                return "col-12";
             }
             switch (tagName.ToLower())
             {
-                case "span12":
+                case "col-12":
                     return "full";
-                case "span8":
+                case "col-8":
                     return "wide";
-                case "span6":
+                case "col-6":
                     return "half";
                 default:
                     return string.Empty;

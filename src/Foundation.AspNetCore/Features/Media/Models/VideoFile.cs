@@ -5,7 +5,7 @@ using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.AspNetCore.Features.Media
+namespace Foundation.AspNetCore.Features.Media.Models
 {
     [ContentType(DisplayName = "Video File",
         GUID = "8a9d9d4b-cd4b-40e8-a777-414cfbda7770",

@@ -11,27 +11,27 @@
 @switch (Model.CurrentContent.Template)
 {
     case TemplateSelections.Grid:
-        @await Html.PartialAsync("Template/_GridTemplate.cshtml", Model)
+        @await Html.PartialAsync("Views/Templates/_GridTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.Card:
-        @await Html.PartialAsync("Template/_CardTemplate.cshtml", Model)
+        @await Html.PartialAsync("Views/Templates/_CardTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.Insight:
-        @await Html.PartialAsync("Template/_InsightTemplate.cshtml", Model)
+        @await Html.PartialAsync("Views/Templates/_InsightTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.ImageLeft:
-        @await Html.PartialAsync("Template/_ImageLeftTemplate.cshtml", Model)
+        @await Html.PartialAsync("Views/Templates/_ImageLeftTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.ImageTop:
-        @await Html.PartialAsync("Template/_ImageTopTemplate.cshtml", Model)
+        @await Html.PartialAsync("Views/Templates/_ImageTopTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.NoImage:
-        @await Html.PartialAsync("Template/_NoImageTemplate.cshtml", Model)
+        @await Html.PartialAsync("Views/Templates/_NoImageTemplate.cshtml", Model)
         break;
 
     case TemplateSelections.Highlight:
@@ -40,7 +40,7 @@
             var flip = false;
             foreach (var blog in Model.Blogs)
             {
-                <partial href="~/View/Template/_HighLightTemplate" model="@blog" view-data="@(new ViewDataDictionary(ViewData) { { "Flip", flip } })" />
+                <partial href="~/Views/Templates/_HighLightTemplate" model="@blog" view-data="@(new ViewDataDictionary(ViewData) { { "Flip", flip } })" />
 
                 if (!blog.CurrentContent.Highlight)
                 {

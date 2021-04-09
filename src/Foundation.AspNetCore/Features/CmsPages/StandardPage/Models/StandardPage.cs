@@ -4,11 +4,9 @@ using EPiServer.DataAnnotations;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Web;
 using Foundation.AspNetCore.Features.Shared;
+using Foundation.AspNetCore.Features.Shared.SelectionFactories;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Threading.Tasks;
 using static Foundation.AspNetCore.Global;
 
 namespace Foundation.AspNetCore.Features.StandardPage
@@ -17,7 +15,7 @@ namespace Foundation.AspNetCore.Features.StandardPage
         GUID = "c0a25bb7-199c-457d-98c6-b0179c7acae8",
         Description = "Allows for creation of rich standard pages",
         GroupName = GroupNames.Content)]
-    [ImageUrl("~/assets/icons/cms/pages/CMS-icon-page-23.png")]
+    [ImageUrl("/icons/cms/pages/CMS-icon-page-23.png")]
     public class StandardPage : FoundationPageData
     {
         [CultureSpecific]

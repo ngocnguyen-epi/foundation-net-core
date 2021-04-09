@@ -11,7 +11,7 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogItemPage.Models
         Description = "Blog Item Page created underneath the start page and moved to the right area",
         GroupName = GroupNames.Blog)]
     [AvailableContentTypes(Availability.Specific, Include = new[] { typeof(BlogListPage.Models.BlogListPage), typeof(BlogItemPage) })]
-    [ImageUrl("~/assets/icons/cms/pages/cms-icon-page-18.png")]
+    [ImageUrl("/icons/cms/pages/cms-icon-page-18.png")]
     public class BlogItemPage : FoundationPageData
     {
         [Display(GroupName = SystemTabNames.Content, Order = 10)]

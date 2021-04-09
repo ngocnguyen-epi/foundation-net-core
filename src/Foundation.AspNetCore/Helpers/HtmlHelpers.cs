@@ -132,7 +132,7 @@ namespace Foundation.AspNetCore.Helpers
                 {
                     linkTag.Attributes.Add("class", cssClass);
                 }
-
+                linkTag.TagRenderMode = TagRenderMode.StartTag;
                 linkTag.WriteTo(helper.ViewContext.Writer, HtmlEncoder.Default);
             }
             return new ConditionalLink(helper.ViewContext, shouldWriteLink);

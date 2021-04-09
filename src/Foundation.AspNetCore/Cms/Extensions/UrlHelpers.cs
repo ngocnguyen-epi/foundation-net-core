@@ -6,29 +6,32 @@ using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Foundation.AspNetCore.Cms.Extensions
 {
     public static class UrlHelpers
     {
         private static readonly Lazy<IUrlResolver> UrlResolver =
-           new Lazy<IUrlResolver>(() => ServiceLocator.Current.GetInstance<IUrlResolver>());
+             new Lazy<IUrlResolver>(() => ServiceLocator.Current.GetInstance<IUrlResolver>());
 
         private static readonly Lazy<IContentLoader> ContentLoader =
             new Lazy<IContentLoader>(() => ServiceLocator.Current.GetInstance<IContentLoader>());
 
-        public static RouteValueDictionary ContentRoute(this IUrlHelper urlHelper,
-            ContentReference contentLink,
-            object routeValues = null)
-        {
-            var first = new RouteValueDictionary(routeValues);
+        //public static RouteValueDictionary ContentRoute(this UrlHelper urlHelper,
+        //    ContentReference contentLink,
+        //    object routeValues = null)
+        //{
+        //    var first = new RouteValueDictionary(routeValues);
 
-            var values = first.Union(urlHelper.ActionContext.RouteData.Values);
+        //    var values = first.Union(urlHelper.RequestContext.RouteData.Values);
 
-            values[RoutingConstants.ActionKey] = "index";
-            values[RoutingConstants.NodeKey] = contentLink;
-            return values;
-        }
+        //    values[RoutingConstants.ActionKey] = "index";
+        //    values[RoutingConstants.NodeKey] = contentLink;
+        //    return values;
+        //}
 
         /// <summary>
         ///     Returns the target URL for a PageReference. Respects the page's shortcut setting
@@ -73,77 +76,87 @@ namespace Foundation.AspNetCore.Cms.Extensions
             return HtmlString.Empty;
         }
 
-        public static HtmlString GetSegmentedUrl(this IUrlHelper urlHelper,
-            PageData currentPage,
-            params string[] segments)
-        {
-            var url = urlHelper.PageLinkUrl(currentPage).ToString();
+        //public static IHtmlString GetSegmentedUrl(this UrlHelper urlHelper,
+        //    PageData currentPage,
+        //    params string[] segments)
+        //{
+        //    var url = urlHelper.PageLinkUrl(currentPage).ToString();
 
-            if (!url.EndsWith("/"))
-                url = url + '/';
-            url += string.Join("/", segments);
-            //TODO: Url-encode segments
+        //    if (!url.EndsWith("/"))
+        //        url = url + '/';
+        //    url += string.Join("/", segments);
+        //    //TODO: Url-encode segments
 
-            return new HtmlString(url);
-        }
+        //    return new HtmlString(url);
+        //}
 
-        public static HtmlString ImageExternalUrl(this IUrlHelper urlHelper,
-            ImageData image)
-        {
-            return new HtmlString(UrlResolver.Value.GetUrl(image.ContentLink));
-        }
+        //public static IHtmlString ImageExternalUrl(this UrlHelper urlHelper,
+        //    ImageData image)
+        //{
+        //    return new MvcHtmlString(UrlResolver.Value.GetUrl(image.ContentLink));
+        //}
 
-        public static HtmlString ImageExternalUrl(this IUrlHelper urlHelper,
-            ImageData image,
-            string variant) => urlHelper.ImageExternalUrl(image.ContentLink, variant);
+        //public static IHtmlString ImageExternalUrl(this UrlHelper urlHelper,
+        //    ImageData image,
+        //    string variant) => urlHelper.ImageExternalUrl(image.ContentLink, variant);
 
-        public static HtmlString ImageExternalUrl(this IUrlHelper urlHelper,
-            Uri imageUri,
-            string variant)
-        {
-            return new HtmlString(
-                string.IsNullOrWhiteSpace(variant) ? imageUri.ToString() : imageUri + "/" + variant);
-        }
+        //public static IHtmlString ImageExternalUrl(this UrlHelper urlHelper,
+        //    Uri imageUri,
+        //    string variant)
+        //{
+        //    return new MvcHtmlString(
+        //        string.IsNullOrWhiteSpace(variant) ? imageUri.ToString() : imageUri + "/" + variant);
+        //}
 
-        public static HtmlString ImageExternalUrl(this IUrlHelper urlHelper,
-            ContentReference imageref,
-            string variant)
-        {
-            if (ContentReference.IsNullOrEmpty(imageref))
-                return HtmlString.Empty;
+        //public static IHtmlString ImageExternalUrl(this UrlHelper urlHelper,
+        //    ContentReference imageref,
+        //    string variant)
+        //{
+        //    if (ContentReference.IsNullOrEmpty(imageref))
+        //        return MvcHtmlString.Empty;
 
-            var url = UrlResolver.Value.GetUrl(imageref);
-            //Inject variant
-            if (!string.IsNullOrEmpty(variant))
-                if (url.Contains("?"))
-                    url = url.Insert(url.IndexOf('?'), "/" + variant);
-                else
-                    url = url + "/" + variant;
-            return new HtmlString(url);
-        }
+        //    var url = UrlResolver.Value.GetUrl(imageref);
+        //    //Inject variant
+        //    if (!string.IsNullOrEmpty(variant))
+        //        if (url.Contains("?"))
+        //            url = url.Insert(url.IndexOf('?'), "/" + variant);
+        //        else
+        //            url = url + "/" + variant;
+        //    return new MvcHtmlString(url);
+        //}
 
-        public static HtmlString GetFriendlyUrl(this IUrlHelper urlHelper, string url)
-        {
-            return new HtmlString(UrlResolver.Value.GetUrl(url) ?? url);
+        //public static IHtmlString CampaignUrl(this UrlHelper urlHelper,
+        //    IHtmlString url,
+        //    string campaign)
+        //{
+        //    var s = url.ToString();
+        //    if (s.Contains("?"))
+        //        return new MvcHtmlString(s + "&utm_campaign=" + HttpContext.Current.Server.UrlEncode(campaign));
+        //    return new MvcHtmlString(s + "?utm_campaign=" + HttpContext.Current.Server.UrlEncode(campaign));
+        //}
 
-        }
+        //public static IHtmlString GetFriendlyUrl(this UrlHelper urlHelper, string url)
+        //{
+        //    return new HtmlString(UrlResolver.Value.GetUrl(url) ?? url);
 
-        private static HtmlString WriteShortenedUrl(string root, string segment)
-        {
-            var fullUrlPath = string.Format("{0}{1}/", root, segment.ToLower().Replace(" ", "-"));
+        //}
 
-            return new HtmlString(fullUrlPath);
-        }
+        //private static IHtmlString WriteShortenedUrl(string root, string segment)
+        //{
+        //    var fullUrlPath = string.Format("{0}{1}/", root, segment.ToLower().Replace(" ", "-"));
 
-        private static RouteValueDictionary Union(this RouteValueDictionary first,
-           RouteValueDictionary second)
-        {
-            var dictionary = new RouteValueDictionary(second);
-            foreach (var pair in first)
-                if (pair.Value != null)
-                    dictionary[pair.Key] = pair.Value;
+        //    return new MvcHtmlString(fullUrlPath);
+        //}
 
-            return dictionary;
-        }
+        //private static RouteValueDictionary Union(this RouteValueDictionary first,
+        //   RouteValueDictionary second)
+        //{
+        //    var dictionary = new RouteValueDictionary(second);
+        //    foreach (var pair in first)
+        //        if (pair.Value != null)
+        //            dictionary[pair.Key] = pair.Value;
+
+        //    return dictionary;
+        //}
     }
 }

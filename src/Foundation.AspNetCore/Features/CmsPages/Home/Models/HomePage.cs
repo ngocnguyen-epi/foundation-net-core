@@ -13,7 +13,7 @@ namespace Foundation.AspNetCore.Features.CmsPages.Home
         Description = "Used for home page of all sites",
         AvailableInEditMode = true,
         GroupName = Global.GroupNames.Content)]
-    [ImageUrl("~/icons/cms/pages/home.png")]
+    [ImageUrl("/icons/cms/pages/home.png")]
     public class HomePage : FoundationPageData
     {
         [CultureSpecific]

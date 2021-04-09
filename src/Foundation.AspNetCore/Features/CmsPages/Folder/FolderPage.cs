@@ -10,7 +10,7 @@ namespace Foundation.AspNetCore.Features.CmsPages.Folder
         Description = "A page which allows you to structure pages.",
         GroupName = SystemTabNames.Content)]
     [AvailableContentTypes(IncludeOn = new[] { typeof(HomePage), typeof(FolderPage) })]
-    [ImageUrl("~/icons/cms/pages/container.png")]
+    [ImageUrl("/icons/cms/pages/container.png")]
     public class FolderPage : PageData
     {
     }

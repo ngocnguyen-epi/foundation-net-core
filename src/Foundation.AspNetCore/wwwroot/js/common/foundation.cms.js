@@ -7,7 +7,7 @@ import Dropdown from "./dropdown";
 import SearchBox from "../../../Features/Search/search-box";
 import ContentSearch from "../../../Features/Search/search";
 import Blog from "../features/blog";
-import Locations from "../../../Features/Locations/locations";
+import Locations from "../features/locations";
 import People from "Features/People/people";
 
 export default class FoundationCms {

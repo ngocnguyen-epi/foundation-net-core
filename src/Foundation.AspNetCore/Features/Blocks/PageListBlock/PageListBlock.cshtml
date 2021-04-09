@@ -17,35 +17,35 @@
                 switch (Model.CurrentBlock.Template)
                 {
                     case TemplateSelections.Grid:
-                        <partial name="Template/_GridTemplate.cshtml" model="@Model" />
+                        <partial name="Templates/_GridTemplate.cshtml" model="@Model" />
                         break;
 
                     case TemplateSelections.ImageLeft:
-                        <partial name="Template/_LeftImageTemplate.cshtml" model="@Model" />
+                        <partial name="Templates/_LeftImageTemplate.cshtml" model="@Model" />
                         break;
 
                     case TemplateSelections.ImageTop:
-                        <partial name="Template/_TopImageTemplate.cshtml" model="@Model" />
+                        <partial name="Templates/_TopImageTemplate.cshtml" model="@Model" />
                         break;
 
                     case TemplateSelections.NoImage:
-                        <partial name="Template/_NoImageTemplate.cshtml" model="@Model" />
+                        <partial name="Templates/_NoImageTemplate.cshtml" model="@Model" />
                         break;
 
                     case TemplateSelections.Highlight:
-                        <partial name="Template/_HighlightPanelTemplate.cshtml" model="@Model" />
+                        <partial name="Templates/_HighlightPanelTemplate.cshtml" model="@Model" />
                         break;
 
                     case TemplateSelections.Card:
-                        <partial name="Template/_CardTemplate.cshtml" model="@Model" />
+                        <partial name="Templates/_CardTemplate.cshtml" model="@Model" />
                         break;
 
                     case TemplateSelections.Insight:
-                        <partial name="Template/_InsightTemplate.cshtml" model="@Model" />
+                        <partial name="Templates/_InsightTemplate.cshtml" model="@Model" />
                         break;
 
                     default:
-                        <partial name="Template/_GridTemplate.cshtml" model="@Model" />
+                        <partial name="Templates/_GridTemplate.cshtml" model="@Model" />
                         break;
                 }
             }

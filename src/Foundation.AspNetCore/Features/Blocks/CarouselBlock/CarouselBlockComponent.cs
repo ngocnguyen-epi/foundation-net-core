@@ -5,10 +5,6 @@ using Foundation.AspNetCore.Features.Media;
 using Foundation.AspNetCore.Features.Media.Models;
 using Foundation.AspNetCore.Features.Shared;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Foundation.AspNetCore.Features.Blocks.CarouselBlock
 {

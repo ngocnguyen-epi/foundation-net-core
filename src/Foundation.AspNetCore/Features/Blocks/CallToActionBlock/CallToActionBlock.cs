@@ -17,7 +17,7 @@ namespace Foundation.AspNetCore.Features.Blocks.CallToActionBlock
         GUID = "f82da800-c923-48f6-b701-fd093078c5d9",
         Description = "Provides a CTA anchor or link",
         GroupName = GroupNames.Content)]
-    [ImageUrl("~/assets/icons/cms/blocks/CMS-icon-block-26.png")]
+    [ImageUrl("/icons/cms/blocks/CMS-icon-block-26.png")]
     public class CallToActionBlock : FoundationBlockData/*, IDashboardItem*/
     {
         [CultureSpecific]

@@ -13,7 +13,7 @@ namespace Foundation.AspNetCore.Features.Blocks.GoogleMapsBlock
         GUID = "8fc31051-6d22-4445-b92d-7c394267fa49",
         Description = "Display Google Maps",
         GroupName = GroupNames.SocialMedia)]
-    [ImageUrl("~/assets/icons/cms/blocks/map.png")]
+    [ImageUrl("/icons/cms/blocks/map.png")]
     public class GoogleMapsBlock : FoundationBlockData
     {
         [Required]

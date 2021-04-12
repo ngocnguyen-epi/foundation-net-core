@@ -9,7 +9,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.AddressBook.Models
         Description = "Manages address book for customer.",
         AvailableInEditMode = false,
         GroupName = GroupNames.Commerce)]
-    [ImageUrl("~/assets/icons/cms/pages/elected.png")]
+    [ImageUrl("~/icons/cms/pages/elected.png")]
     public class AddressBookPage : FoundationPageData
     {
     }

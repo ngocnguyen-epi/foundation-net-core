@@ -10,7 +10,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.OrderDetails.Models
         Description = "Page for customer to view their order",
         GroupName = GroupNames.Commerce,
         AvailableInEditMode = false)]
-    [ImageUrl("~/assets/icons/cms/pages/cms-icon-page-15.png")]
+    [ImageUrl("~/icons/cms/pages/cms-icon-page-15.png")]
     public class OrderDetailsPage : FoundationPageData
     {
     }

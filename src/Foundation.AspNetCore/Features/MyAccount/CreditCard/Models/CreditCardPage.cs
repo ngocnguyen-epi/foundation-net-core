@@ -11,7 +11,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.CreditCard.Models
         Description = "Manage credit cards",
         AvailableInEditMode = false,
         GroupName = GroupNames.Commerce)]
-    [ImageUrl("~/assets/icons/cms/pages/CMS-icon-page-14.png")]
+    [ImageUrl("~/icons/cms/pages/CMS-icon-page-14.png")]
     public class CreditCardPage : FoundationPageData/*, IDisableOPE*/
     {
         [Display(GroupName = SystemTabNames.Content, Order = 200)]

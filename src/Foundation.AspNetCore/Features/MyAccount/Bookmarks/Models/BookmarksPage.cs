@@ -9,7 +9,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.Bookmarks.Models
         Description = "This page displays list the different content that has been bookmarked belonging to an user",
         GroupName = SystemTabNames.Content,
         AvailableInEditMode = false)]
-    [ImageUrl("~/assets/icons/cms/pages/CMS-icon-page-28.png")]
+    [ImageUrl("~/icons/cms/pages/CMS-icon-page-28.png")]
     public class BookmarksPage : FoundationPageData
     {
     }

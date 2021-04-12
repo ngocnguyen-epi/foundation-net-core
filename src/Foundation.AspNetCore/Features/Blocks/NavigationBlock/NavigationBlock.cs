@@ -15,7 +15,7 @@ namespace Foundation.AspNetCore.Features.Blocks.NavigationBlock
         GUID = "7C53F707-C932-4FDD-A654-37FF2A1258EB",
         Description = "Render normal left/right navigation structures",
         GroupName = GroupNames.Content)]
-    [ImageUrl("~/assets/icons/cms/blocks/CMS-icon-block-30.png")]
+    [ImageUrl("/icons/cms/blocks/CMS-icon-block-30.png")]
     public class NavigationBlock : FoundationBlockData
     {
         [Display(Name = "Heading", Order = 10, GroupName = SystemTabNames.Content)]

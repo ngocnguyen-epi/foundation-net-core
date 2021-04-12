@@ -16,7 +16,7 @@ namespace Foundation.AspNetCore.Features.Blocks.HealthBot
         Description = "Used to insert a health chat bot",
         GroupName = GroupNames.Content,
         AvailableInEditMode = true)]
-    [ImageUrl("~/assets/icons/cms/blocks/CMS-icon-block-25.png")]
+    [ImageUrl("/icons/cms/blocks/CMS-icon-block-25.png")]
     public class HealthBotBlock : FoundationBlockData
     {
         [CultureSpecific]

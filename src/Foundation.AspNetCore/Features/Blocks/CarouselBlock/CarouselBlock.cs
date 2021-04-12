@@ -1,6 +1,6 @@
 ﻿using EPiServer.Core;
 using EPiServer.DataAnnotations;
-using Foundation.AspNetCore.Features.Media;
+using Foundation.AspNetCore.Features.Media.Models;
 using Foundation.AspNetCore.Features.Shared;
 using System.ComponentModel.DataAnnotations;
 using static Foundation.AspNetCore.Global;

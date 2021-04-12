@@ -18,7 +18,7 @@ namespace Foundation.AspNetCore.Features.Blocks.TeaserBlock
          Description = "Image block with overlay for text",
          GroupName = GroupNames.Content)]
     //[DefaultDisplayOption(ContentAreaTags.OneThirdWidth)]
-    [ImageUrl("~/assets/icons/cms/blocks/CMS-icon-block-26.png")]
+    [ImageUrl("/icons/cms/blocks/CMS-icon-block-26.png")]
     public class TeaserBlock : FoundationBlockData/*, IDashboardItem*/
     {
         [CultureSpecific]

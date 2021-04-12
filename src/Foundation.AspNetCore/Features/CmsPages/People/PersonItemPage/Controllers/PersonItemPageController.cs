@@ -1,6 +1,8 @@
 ﻿using EPiServer.Web.Mvc;
+using Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.Models;
+using Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-namespace Foundation.Features.CmsPages.People.PersonItemPage
+namespace Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.Controllers
 {
     public class PersonItemPageController : PageController<PersonPage>
     {

@@ -9,7 +9,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using static Foundation.AspNetCore.Global;
 
-namespace Foundation.AspNetCore.Features.StandardPage
+namespace Foundation.AspNetCore.Features.CmsPages.StandardPage.Models
 {
     [ContentType(DisplayName = "Standard Page",
         GUID = "c0a25bb7-199c-457d-98c6-b0179c7acae8",

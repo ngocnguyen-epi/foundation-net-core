@@ -5,6 +5,7 @@
 	<ItemGroup>
 		<PackageReference Include="EPiServer.Cms.UI.AspNetIdentity" Version="12.0.0-inte-020579" />
 		<PackageReference Include="EPiServer.Cms.Web" Version="12.0.0-inte-020579" />
+		<PackageReference Include="EPiServer.Commerce.Web" Version="14.0.0-inte-020306" />
 		<PackageReference Include="Wangkanai.Detection" Version="2.0.1" />
 	</ItemGroup>
 	<ItemGroup>
@@ -14,7 +15,50 @@
 		<None Include="wwwroot\**\*.*" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Compile Remove="Features\MyAccount\OrderDetails\**" />
+	  <Content Remove="Features\MyAccount\OrderDetails\**" />
+	  <EmbeddedResource Remove="Features\MyAccount\OrderDetails\**" />
+	  <None Remove="Features\MyAccount\OrderDetails\**" />
+	</ItemGroup>
+	<ItemGroup>
 	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\BlogCommentRepository.cs" />
 	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\PageCommentRepository.cs" />
+	  <Compile Remove="Features\Shared\Commerce\Order\Services\CartService.cs" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="wwwroot\css\components\contents\_blog-list-page.scss" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="App_Data\" />
+	  <Folder Include="Features\CatalogContents\Variation\ViewModels\" />
+	  <Folder Include="Features\CatalogContents\Variation\Views\" />
+	  <Folder Include="Features\CatalogContents\Variation\Controllers\" />
+	  <Folder Include="Features\CmsPages\Blog\BlogCommentBlock\Interfaces\" />
+	  <Folder Include="Features\Shared\Commerce\Shipping\Services\" />
+	  <Folder Include="Features\Shared\Commerce\Shipping\Interfaces\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Include="Features\Blocks\OrderHistoryBlock\Index.cshtml" />
+	  <None Include="Features\MyAccount\AddressBook\Views\EditAddress.cshtml" />
+	  <None Include="Features\MyAccount\AddressBook\Views\EditForm.cshtml" />
+	  <None Include="Features\MyAccount\AddressBook\Views\Index.cshtml" />
+	  <None Include="Features\MyAccount\AddressBook\Views\ModalAddressDialog.cshtml" />
+	  <None Include="Features\MyAccount\CreditCard\Views\EditForm.cshtml" />
+	  <None Include="Features\MyAccount\CreditCard\Views\Index.cshtml" />
+	  <None Include="Features\MyAccount\OrderConfirmation\Views\Index.cshtml" />
+	  <None Include="Features\MyAccount\OrderConfirmation\Views\_BudgetPaymentConfirmation.cshtml" />
+	  <None Include="Features\MyAccount\OrderConfirmation\Views\_CashOnDeliveryConfirmation.cshtml" />
+	  <None Include="Features\MyAccount\OrderConfirmation\Views\_GenericCreditCardConfirmation.cshtml" />
+	  <None Include="Features\MyAccount\OrderConfirmation\Views\_GiftCardPaymentConfirmation.cshtml" />
+	  <None Include="Features\MyAccount\OrderHistory\Views\Detail.cshtml" />
+	  <None Include="Features\MyAccount\OrderHistory\Views\Index.cshtml" />
+	  <None Include="Features\MyAccount\OrderHistory\Views\_OrderFilterBox.cshtml" />
+	  <None Include="Features\MyAccount\ProfilePage\Views\Index.cshtml" />
+	  <None Include="Features\MyAccount\ResetPassword\Views\ForgotPassword.cshtml" />
+	  <None Include="Features\MyAccount\ResetPassword\Views\ForgotPasswordConfirmation.cshtml" />
+	  <None Include="Features\MyAccount\ResetPassword\Views\ResetPassword.cshtml" />
+	  <None Include="Features\MyAccount\ResetPassword\Views\ResetPasswordConfirmation.cshtml" />
+	  <None Include="Features\MyAccount\SubscriptionDetail\Views\Index.cshtml" />
+	  <None Include="Features\MyAccount\SubscriptionHistory\Views\Index.cshtml" />
 	</ItemGroup>
 </Project>

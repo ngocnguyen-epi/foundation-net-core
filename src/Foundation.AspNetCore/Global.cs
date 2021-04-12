@@ -21,6 +21,9 @@ namespace Foundation.AspNetCore
             [Display(Name = "Content", Order = 510)]
             public const string Content = "Content";
 
+            [Display(Name = "Commerce", Order = 510)]
+            public const string Commerce = "Commerce";
+
             [Display(Order = 530)]
             public const string Account = "Account";
 

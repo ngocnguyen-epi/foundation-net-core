@@ -1,5 +1,5 @@
 ﻿@using Foundation.AspNetCore.Features.CmsPages.Location.TagPage.ViewModels 
-@using Foundation.AspNetCore.Cms.Extensions
+@using Foundation.AspNetCore.Extensions
 
 @model TagsViewModel
 
@@ -34,7 +34,7 @@
                 {
                     foreach (var lst in Model.Locations.GroupBy(dp => dp.Continent).OrderBy(dp => dp.Key))
                     {
-                        <a href="@Url.GetSegmentedUrl(Model.CurrentContent,lst.Key)">
+                        <a href="@(Url.GetSegmentedUrl(Model.CurrentContent,lst.Key))">
                             <h2 class="section-lines">@lst.Key</h2>
                         </a>
                         foreach (var location in lst.ToList())

@@ -1,11 +1,11 @@
 using Foundation.AspNetCore.Cms;
+using Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.Models;
+using Foundation.AspNetCore.Features.CmsPages.People.PersonListPage.Models;
 using Foundation.AspNetCore.Features.Shared;
-using Foundation.Features.CmsPages.People.PersonItemPage;
-using Foundation.Features.CmsPages.People.PersonListPage;
 using System;
 using System.Collections.Generic;
 
-namespace Foundation.Features.People.PersonListPage
+namespace Foundation.AspNetCore.Features.CmsPages.People.PersonListPage.ViewModels
 {
     public class PersonListViewModel : ContentViewModel<PersonList>
     {

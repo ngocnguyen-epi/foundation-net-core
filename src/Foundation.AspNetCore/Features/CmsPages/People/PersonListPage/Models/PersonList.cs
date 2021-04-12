@@ -1,10 +1,9 @@
 ﻿using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
-using Foundation.AspNetCore;
+using Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.Models;
 using Foundation.AspNetCore.Features.Shared;
-using Foundation.Features.CmsPages.People.PersonItemPage;
 
-namespace Foundation.Features.CmsPages.People.PersonListPage
+namespace Foundation.AspNetCore.Features.CmsPages.People.PersonListPage.Models
 {
     [ContentType(DisplayName = "Person List Page",
         GUID = "4f0203b6-d49e-4683-9ce6-ede8c37c77d3",

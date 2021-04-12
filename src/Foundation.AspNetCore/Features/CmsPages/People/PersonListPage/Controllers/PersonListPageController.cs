@@ -5,14 +5,15 @@ using EPiServer.Web.Mvc;
 using Foundation.AspNetCore.Cms;
 using Foundation.AspNetCore.Cms.Settings;
 using Foundation.AspNetCore.Extensions;
+using Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.Models;
+using Foundation.AspNetCore.Features.CmsPages.People.PersonListPage.Models;
+using Foundation.AspNetCore.Features.CmsPages.People.PersonListPage.ViewModels;
 using Foundation.AspNetCore.Features.Settings;
-using Foundation.Features.CmsPages.People.PersonItemPage;
-using Foundation.Features.People.PersonListPage;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Foundation.Features.CmsPages.People.PersonListPage
+namespace Foundation.AspNetCore.Features.CmsPages.People.PersonListPage.Controllers
 {
     public class PersonListPageController : PageController<PersonList>
     {
@@ -52,7 +53,7 @@ namespace Foundation.Features.CmsPages.People.PersonListPage
             var collectionSettingPage = _settingsService.GetSiteSettings<CollectionSettings>();
             var sectorsList = collectionSettingPage?.Sectors?.OrderBy(x => x.Text).ToList() ?? new List<SelectionItem>();
             var locationsList = collectionSettingPage?.Locations?.OrderBy(x => x.Text).ToList() ?? new List<SelectionItem>();
-            
+
             var model = new PersonListViewModel(currentPage)
             {
                 Persons = persons,

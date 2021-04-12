@@ -8,6 +8,7 @@ using EPiServer.Web.Routing;
 using Foundation.AspNetCore.Cms.Settings;
 using Foundation.AspNetCore.Extensions;
 using Foundation.AspNetCore.Infrastructure;
+using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -39,6 +40,7 @@ namespace Foundation.AspNetCore
                 o.SetConnectionString(connectionstring);
             });
 
+            services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
             services.AddCmsAspNetIdentity<ApplicationUser>(o =>
             {
                 if (string.IsNullOrEmpty(o.ConnectionStringOptions?.ConnectionString))

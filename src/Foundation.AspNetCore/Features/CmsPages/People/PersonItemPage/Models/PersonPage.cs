@@ -3,12 +3,11 @@ using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Shell.ObjectEditing;
 using EPiServer.Web;
-using Foundation.AspNetCore;
 using Foundation.AspNetCore.Features.Shared;
 using Foundation.AspNetCore.Features.Shared.SelectionFactories;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.Features.CmsPages.People.PersonItemPage
+namespace Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.Models
 {
     [ContentType(DisplayName = "Person Item Page",
         GUID = "b5af511b-96c9-4ad7-828f-254924542430",

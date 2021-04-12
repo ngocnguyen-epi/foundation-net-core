@@ -5,6 +5,7 @@ using EPiServer.Web;
 using Foundation.AspNetCore.Cms.Settings;
 using Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Interfaces;
 using Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Services;
+using Foundation.AspNetCore.Features.MyAccount.Bookmarks.Services;
 using Foundation.AspNetCore.Features.Shared.Interfaces;
 using Foundation.AspNetCore.Features.Shared.Services;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,6 +23,7 @@ namespace Foundation.AspNetCore.Infrastructure
             context.Services.AddTransient<IPageCommentRepository, FakePageCommentRepository>();
             context.Services.AddTransient<IPageRepository, PageRepository>();
             context.Services.AddTransient<IUserRepository, UserRepository>();
+            context.Services.AddTransient<IBookmarksService, BookmarksService>();
         }
 
         public void Initialize(InitializationEngine context)

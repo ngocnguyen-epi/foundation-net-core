@@ -1,6 +1,7 @@
+using Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.Models;
 using Foundation.AspNetCore.Features.Shared;
 
-namespace Foundation.Features.CmsPages.People.PersonItemPage
+namespace Foundation.AspNetCore.Features.CmsPages.People.PersonItemPage.ViewModels
 {
     public class PersonItemViewModel : ContentViewModel<PersonPage>
     {

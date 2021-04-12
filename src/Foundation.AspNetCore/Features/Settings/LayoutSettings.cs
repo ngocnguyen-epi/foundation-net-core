@@ -7,6 +7,7 @@ using EPiServer.Web;
 using Foundation.AspNetCore.Cms.Settings;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using static Foundation.AspNetCore.Global;
 
 namespace Foundation.AspNetCore.Features.Settings
 {
@@ -64,14 +65,18 @@ namespace Foundation.AspNetCore.Features.Settings
         [CultureSpecific]
         //[AllowedTypes(new[] { typeof(MenuItemBlock), typeof(PageData) })]
         //[UIHint("HideContentAreaActionsContainer", PresentationLayer.Edit)]
-        [Display(Name = "Main menu", GroupName = Global.TabNames.Menu, Order = 10)]
+        [Display(Name = "Main menu", GroupName = TabNames.Menu, Order = 10)]
         public virtual ContentArea MainMenu { get; set; }
 
         [CultureSpecific]
         [Display(Name = "My account menu",
-            GroupName = Global.TabNames.Menu,
+            GroupName = TabNames.Menu,
             Order = 40)]
         public virtual LinkItemCollection MyAccountCmsMenu { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Organization menu", GroupName = TabNames.Menu, Order = 50)]
+        public virtual LinkItemCollection OrganizationMenu { get; set; }
 
         #endregion
 

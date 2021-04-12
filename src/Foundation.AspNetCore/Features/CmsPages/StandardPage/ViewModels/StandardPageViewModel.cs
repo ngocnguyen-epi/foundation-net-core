@@ -2,17 +2,17 @@
 using Foundation.AspNetCore.Features.Shared;
 using System.Linq;
 
-namespace Foundation.AspNetCore.Features.StandardPage
+namespace Foundation.AspNetCore.Features.CmsPages.StandardPage.ViewModels
 {
-    public class StandardPageViewModel : ContentViewModel<StandardPage>
+    public class StandardPageViewModel : ContentViewModel<Models.StandardPage>
     {
         public string CategoryName { get; set; }
 
-        public StandardPageViewModel(StandardPage currentPage) : base(currentPage)
+        public StandardPageViewModel(Models.StandardPage currentPage) : base(currentPage)
         {
         }
 
-        public static StandardPageViewModel Create(StandardPage currentPage, CategoryRepository categoryRepository)
+        public static StandardPageViewModel Create(Models.StandardPage currentPage, CategoryRepository categoryRepository)
         {
             var model = new StandardPageViewModel(currentPage);
             if (currentPage.Category.Any())

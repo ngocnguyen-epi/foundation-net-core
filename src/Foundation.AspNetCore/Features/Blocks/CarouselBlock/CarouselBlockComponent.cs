@@ -2,6 +2,7 @@
 using EPiServer.Core;
 using EPiServer.Web.Mvc;
 using Foundation.AspNetCore.Features.Media;
+using Foundation.AspNetCore.Features.Media.Models;
 using Foundation.AspNetCore.Features.Shared;
 using Microsoft.AspNetCore.Mvc;
 using System;

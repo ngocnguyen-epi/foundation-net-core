@@ -1,10 +1,11 @@
 ﻿using EPiServer.DataAbstraction;
 using EPiServer.Web.Mvc;
+using Foundation.AspNetCore.Features.CmsPages.StandardPage.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Foundation.AspNetCore.Features.StandardPage
+namespace Foundation.AspNetCore.Features.CmsPages.StandardPage.Controllers
 {
-    public class StandardPageController : PageController<StandardPage>
+    public class StandardPageController : PageController<Models.StandardPage>
     {
         private readonly CategoryRepository _categoryRepository;
 
@@ -14,7 +15,7 @@ namespace Foundation.AspNetCore.Features.StandardPage
         }
 
         //[PageViewTracking]
-        public IActionResult Index(StandardPage currentPage)
+        public IActionResult Index(Models.StandardPage currentPage)
         {
             var model = StandardPageViewModel.Create(currentPage, _categoryRepository);
             return View(model);

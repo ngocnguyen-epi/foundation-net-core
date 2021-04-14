@@ -4,8 +4,10 @@
 @import 'abstracts/**/*.scss';
 
 // 2. Vendors
-@import 
-    '~bootstrap/scss/bootstrap', 
+@import
+    '~bootstrap/scss/bootstrap',
+    '~jquery-ui/themes/base/all.css',
+    '~bootstrap-slider/dist/css/bootstrap-slider.min.css',
     '~@fortawesome/fontawesome-free/css/all.min.css';
 
 // 3. Base stuff
@@ -22,7 +24,3 @@
 
 // 7. Themes
 @import 'themes/**/*.scss';
-
-// 8. Features
-@import 'features/**/*.scss';
-

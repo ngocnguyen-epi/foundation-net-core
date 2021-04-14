@@ -10,7 +10,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.ProfilePage.Models
         Description = "Page to show and manage profile information",
         GroupName = SystemTabNames.Content,
         AvailableInEditMode = false)]
-    [ImageUrl("~/icons/cms/pages/elected.png")]
+    [ImageUrl("/icons/cms/pages/elected.png")]
     public class ProfilePage : FoundationPageData
     {
         //[Display(Name = "Activity feed",

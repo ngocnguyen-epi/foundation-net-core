@@ -30,4 +30,5 @@ dotnet tool install EPiServer.Net.Cli --global --add-source https://pkgs.dev.azu
 
 ```
 cd projectname
-dotnet-episerver create-cms-database ProjectName.csproj -S . -E 
+dotnet-episerver create-cms-database ProjectName.csproj -S . -E
+dotnet-episerver create-commerce-database ProjectName.csproj -S . -E --reuse-cms-user 

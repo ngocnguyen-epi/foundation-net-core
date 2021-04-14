@@ -13,7 +13,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.OrderConfirmation.Models
         GroupName = GroupNames.Commerce,
         AvailableInEditMode = false)]
     [AvailableContentTypes(Availability = Availability.None)]
-    [ImageUrl("~/icons/cms/pages/cms-icon-page-08.png")]
+    [ImageUrl("/icons/cms/pages/cms-icon-page-08.png")]
     public class OrderConfirmationPage : FoundationPageData
     {
         [CultureSpecific]

@@ -32,22 +32,31 @@ namespace Foundation.AspNetCore
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var dbPath = Path.Combine(_webHostingEnvironment.ContentRootPath, "App_Data\\Alloy.mdf");
-            var connectionstring = _configuration.GetConnectionString("EPiServerDB") ?? $"Data Source=(LocalDb)\\MSSQLLocalDB;AttachDbFilename={dbPath};Initial Catalog=alloy_mvc_netcore;Integrated Security=True;Connect Timeout=30;MultipleActiveResultSets=True";
+            var connectionStringCms = _configuration.GetConnectionString("EPiServerDB");
+            var connectionStringCommerce = _configuration.GetConnectionString("EcfSqlConnection");
 
             services.Configure<DataAccessOptions>(o =>
             {
-                o.SetConnectionString(connectionstring);
+                //o.UpdateDatabaseSchema = true;
+
+                o.SetConnectionString(connectionStringCms);
+                o.ConnectionStrings.Add(new ConnectionStringOptions
+                {
+                    ConnectionString = connectionStringCommerce,
+                    Name = "EcfSqlConnection"
+                });
             });
 
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme).AddCookie();
+
             services.AddCmsAspNetIdentity<ApplicationUser>(o =>
             {
                 if (string.IsNullOrEmpty(o.ConnectionStringOptions?.ConnectionString))
                 {
                     o.ConnectionStringOptions = new ConnectionStringOptions()
                     {
-                        ConnectionString = connectionstring
+                        Name = "EcfSqlConnection",
+                        ConnectionString = connectionStringCommerce
                     };
                 }
             });
@@ -55,6 +64,7 @@ namespace Foundation.AspNetCore
             services.AddMvc();
             services.AddFoundation();
             services.AddCms();
+            services.AddCommerce();
 
             services.Configure<UIOptions>(uiOptions =>
             {
@@ -62,6 +72,7 @@ namespace Foundation.AspNetCore
             });
 
             // Site Specific
+            services.Configure<IISServerOptions>(options => options.AllowSynchronousIO = true);
             services.TryAddEnumerable(Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton(typeof(IFirstRequestInitializer), typeof(UsersInstaller)));
             services.AddHttpContextAccessor();
             services.AddSingleton<ISettingsService, SettingsService>();

@@ -3,9 +3,13 @@
 		<TargetFramework>net5.0</TargetFramework>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="EPiServer.Cms.UI.AspNetIdentity" Version="12.0.0-inte-020579" />
-		<PackageReference Include="EPiServer.Cms.Web" Version="12.0.0-inte-020579" />
-		<PackageReference Include="EPiServer.Commerce.Web" Version="14.0.0-inte-020306" />
+		<PackageReference Include="EPiServer.Cms.UI.AspNetIdentity" Version="12.0.0-inte-020701" />
+		<PackageReference Include="EPiServer.Cms.Web" Version="12.0.0-inte-020701" />
+		<PackageReference Include="EPiServer.Commerce.Web" Version="14.0.0-inte-020424" />
+		<PackageReference Include="EPiServer.Personalization.Commerce" Version="4.0.0-inte-020424" />
+		<PackageReference Include="Lucene.Net" Version="4.8.0-beta00012" />
+		<PackageReference Include="Lucene.Net.QueryParser" Version="4.8.0-beta00012" />
+		<PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
 		<PackageReference Include="Wangkanai.Detection" Version="2.0.1" />
 	</ItemGroup>
 	<ItemGroup>

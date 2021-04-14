@@ -9,7 +9,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.GiftCard.Models
         Description = "This page displays all gift cards belonging to an user",
         GroupName = GroupNames.Commerce,
         AvailableInEditMode = false)]
-    [ImageUrl("~/icons/cms/pages/CMS-icon-page-12.png")]
+    [ImageUrl("/icons/cms/pages/CMS-icon-page-12.png")]
     public class GiftCardPage : FoundationPageData
     {
     }

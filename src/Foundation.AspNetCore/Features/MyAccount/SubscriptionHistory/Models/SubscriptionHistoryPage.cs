@@ -9,7 +9,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.SubscriptionHistory.Models
         Description = "Page for customers to view their subscription history",
         GroupName = GroupNames.Commerce,
         AvailableInEditMode = false)]
-    [ImageUrl("~/icons/cms/pages/CMS-icon-page-14.png")]
+    [ImageUrl("/icons/cms/pages/CMS-icon-page-14.png")]
     public class SubscriptionHistoryPage : FoundationPageData
     {
     }

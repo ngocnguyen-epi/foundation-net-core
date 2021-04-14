@@ -1,3 +1,4 @@
+using Foundation.AspNetCore.Cms.Attributes;
 using Foundation.AspNetCore.Features.MyAccount.AddressBook.ViewModels;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -13,58 +14,58 @@ namespace Foundation.AspNetCore.Features.MyAccount.AddressBook.Models
 
         public string AddressId { get; set; }
 
-        //[LocalizedRequired("/Shared/Address/Form/Empty/Name")]
-        //[LocalizedDisplay("/Shared/Address/Form/Label/Name")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/Name")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/Name")]
         public string Name { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/FirstName")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/FirstName")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/FirstName")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/FirstName")]
         public string FirstName { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/LastName")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/LastName")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/LastName")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/LastName")]
         public string LastName { get; set; }
 
         public string CountryName { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/CountryCode")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/CountryCode")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/CountryCode")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/CountryCode")]
         public string CountryCode { get; set; }
 
         public IEnumerable<CountryViewModel> CountryOptions { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/City")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/City")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/City")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/City")]
         public string City { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/PostalCode")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/PostalCode")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/PostalCode")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/PostalCode")]
         public string PostalCode { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/Line1")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/Line1")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/Line1")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/Line1")]
         public string Line1 { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/Line2")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/Line2")]
         public string Line2 { get; set; }
 
         [UIHint("AddressRegion")]
         public CountryRegionViewModel CountryRegion { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/Email")]
-        //[LocalizedEmail("/Shared/Address/Form/Error/InvalidEmail")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/Email")]
+        [LocalizedEmail("/Shared/Address/Form/Error/InvalidEmail")]
         public string Email { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/ShippingAddress")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/ShippingAddress")]
         public bool ShippingDefault { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/BillingAddress")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/BillingAddress")]
         public bool BillingDefault { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/DaytimePhoneNumber")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/DaytimePhoneNumber")]
         public string DaytimePhoneNumber { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/Organization")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/Organization")]
         public string Organization { get; set; }
 
         public string ErrorMessage { get; set; }

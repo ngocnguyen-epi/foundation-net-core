@@ -1,6 +1,7 @@
 ﻿using Foundation.AspNetCore.Features.MyAccount.AddressBook.ViewModels;
 using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Models;
 using Foundation.AspNetCore.Features.Shared.Commerce.Organization.ViewModels;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -16,8 +17,8 @@ namespace Foundation.AspNetCore.Features.Shared.Commerce.Organization.Models
                 : new List<B2BAddressViewModel>();
         }
 
-        //[LocalizedDisplay("/B2B/Organization/SubOrganizationName")]
-        //[LocalizedRequired("/B2B/Organization/SubOrganizationNameRequired")]
+        [LocalizedDisplay("/B2B/Organization/SubOrganizationName")]
+        [LocalizedRequired("/B2B/Organization/SubOrganizationNameRequired")]
         public new string Name { get; set; }
 
         public List<B2BAddressViewModel> Locations { get; set; }

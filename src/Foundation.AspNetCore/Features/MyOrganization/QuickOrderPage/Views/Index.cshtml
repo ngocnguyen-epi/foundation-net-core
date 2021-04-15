@@ -1,0 +1,10 @@
+﻿@using Foundation.AspNetCore.Features.MyOrganization.QuickOrderPage.ViewModels
+
+@model QuickOrderPageViewModel
+
+@{
+    Layout = "~/Features/MyOrganization/Shared/Views/_MyOrganizationLayout.cshtml";
+}
+
+@Html.PropertyFor(model => model.CurrentContent.MainBody)
+@Html.PropertyFor(m => m.CurrentContent.QuickOrderBlockContentArea)

@@ -4,11 +4,11 @@ import Header from "./header";
 import MobileNavigation from "./mobile-navigation";
 import Selection from "./selection";
 import Dropdown from "./dropdown";
-import SearchBox from "../../../Features/Search/search-box";
-import ContentSearch from "../../../Features/Search/search";
+import SearchBox from "./search-box";
+import ContentSearch from "../features/search";
 import Blog from "../features/blog";
 import Locations from "../features/locations";
-import People from "Features/People/people";
+import People from "../features/people";
 
 export default class FoundationCms {
     init() {

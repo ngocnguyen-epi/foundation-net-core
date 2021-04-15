@@ -2,6 +2,7 @@ using Foundation.AspNetCore.Extensions;
 using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Models;
 using Foundation.AspNetCore.Features.Shared.Commerce.Organization.ViewModels;
 using Foundation.AspNetCore.Infrastructure;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 using Mediachase.Commerce.Customers;
 using System;
 using System.Collections.Generic;
@@ -37,15 +38,15 @@ namespace Foundation.AspNetCore.Features.Shared.Commerce.Organization.Models
 
         public Guid OrganizationId { get; set; }
 
-        //[LocalizedDisplay("/B2B/Organization/OrganizationName")]
-        //[LocalizedRequired("/B2B/Organization/OrganizationNameRequired")]
+        [LocalizedDisplay("/B2B/Organization/OrganizationName")]
+        [LocalizedRequired("/B2B/Organization/OrganizationNameRequired")]
         public string Name { get; set; }
 
         public B2BAddressViewModel Address { get; set; }
         public List<OrganizationModel> SubOrganizations { get; set; }
         public Guid ParentOrganizationId { get; set; }
         public OrganizationModel ParentOrganization { get; set; }
-        //public BudgetViewModel CurrentBudgetViewModel { get; set; }
+        public BudgetViewModel CurrentBudgetViewModel { get; set; }
         public CustomerContact MainContact { get; set; }
     }
 }

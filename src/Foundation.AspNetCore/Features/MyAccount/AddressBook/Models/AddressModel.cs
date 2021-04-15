@@ -1,5 +1,5 @@
-using Foundation.AspNetCore.Cms.Attributes;
 using Foundation.AspNetCore.Features.MyAccount.AddressBook.ViewModels;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 

@@ -2,19 +2,17 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Validation;
-using Foundation.AspNetCore;
-using Foundation.Features.CmsPages.LandingPages.LandingPage;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.Features.LandingPages.ThreeColumnLandingPage
+namespace Foundation.AspNetCore.Features.CmsPages.LandingPages.ThreeColumnLandingPage.Models
 {
     [ContentType(DisplayName = "Three Column Landing Page",
        GUID = "947EDF31-8C8C-4595-8591-A17DEF75685E",
        Description = "Three column landing page with properties to determin column size",
        GroupName = Global.GroupNames.Content)]
     [ImageUrl("/icons/gfx/page-type-thumbnail-landingpage-threecol.png")]
-    public class ThreeColumnLandingPage : LandingPage
+    public class ThreeColumnLandingPage : LandingPage.Models.LandingPage
     {
         [CultureSpecific]
         [Display(Name = "Left content area", GroupName = SystemTabNames.Content, Order = 190)]

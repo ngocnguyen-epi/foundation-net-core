@@ -1,11 +1,10 @@
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
-using Foundation.AspNetCore;
 using Foundation.AspNetCore.Features.Shared;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.Features.CmsPages.LandingPages.LandingPage
+namespace Foundation.AspNetCore.Features.CmsPages.LandingPages.LandingPage.Models
 {
     [ContentType(DisplayName = "Single Column Landing Page",
        GUID = "DBED4258-8213-48DB-A11F-99C034172A54",

@@ -1,5 +1,5 @@
 ﻿using EPiServer.Core;
-using Foundation.AspNetCore.Cms.Attributes;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 
 namespace Foundation.AspNetCore.Features.CmsPages.Login.ViewModels
 {

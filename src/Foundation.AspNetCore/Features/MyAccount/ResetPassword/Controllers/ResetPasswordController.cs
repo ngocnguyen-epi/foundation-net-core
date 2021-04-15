@@ -11,6 +11,7 @@ using Foundation.AspNetCore.Features.Settings;
 using Foundation.AspNetCore.Features.Shared;
 using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Interfaces;
 using Foundation.AspNetCore.Features.Shared.Interfaces;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 using Foundation.AspNetCore.Infrastructure.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -99,7 +100,7 @@ namespace Foundation.AspNetCore.Features.MyAccount.ResetPassword.Controllers
         }
 
         [HttpPost]
-        //[AllowDBWrite]
+        [AllowDBWrite]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)

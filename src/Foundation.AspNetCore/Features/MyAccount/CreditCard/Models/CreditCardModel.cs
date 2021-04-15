@@ -1,5 +1,6 @@
 using EPiServer.Framework.Localization;
 using Foundation.AspNetCore.Features.Shared.Commerce.Organization.Models;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 using Mediachase.Commerce.Customers;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using System;
@@ -43,26 +44,26 @@ namespace Foundation.AspNetCore.Features.MyAccount.CreditCard.Models
 
         public CustomerContact CurrentContact { get; set; }
 
-        //[LocalizedDisplay("/CreditCard/Labels/CreditCardName")]
-        //[LocalizedRequired("/CreditCard/Empty/CreditCardName")]
+        [LocalizedDisplay("/CreditCard/Labels/CreditCardName")]
+        [LocalizedRequired("/CreditCard/Empty/CreditCardName")]
         public string CreditCardName { get; set; }
 
-        //[LocalizedDisplay("/CreditCard/Labels/CreditCardNumber")]
-        //[LocalizedRequired("/CreditCard/Empty/CreditCardNumber")]
+        [LocalizedDisplay("/CreditCard/Labels/CreditCardNumber")]
+        [LocalizedRequired("/CreditCard/Empty/CreditCardNumber")]
         public string CreditCardNumber { get; set; }
 
         public string LastFourDigit => CreditCardNumber.Substring(CreditCardNumber.Length - 4);
 
-        //[LocalizedDisplay("/CreditCard/Labels/CreditCardSecurityCode")]
-        //[LocalizedRequired("/CreditCard/Empty/CreditCardSecurityCode")]
+        [LocalizedDisplay("/CreditCard/Labels/CreditCardSecurityCode")]
+        [LocalizedRequired("/CreditCard/Empty/CreditCardSecurityCode")]
         public string CreditCardSecurityCode { get; set; }
 
-        //[LocalizedDisplay("/CreditCard/Labels/ExpirationMonth")]
-        //[LocalizedRequired("/CreditCard/Empty/ExpirationMonth")]
+        [LocalizedDisplay("/CreditCard/Labels/ExpirationMonth")]
+        [LocalizedRequired("/CreditCard/Empty/ExpirationMonth")]
         public int? ExpirationMonth { get; set; }
 
-        //[LocalizedDisplay("/CreditCard/Labels/ExpirationYear")]
-        //[LocalizedRequired("/CreditCard/Empty/ExpirationYear")]
+        [LocalizedDisplay("/CreditCard/Labels/ExpirationYear")]
+        [LocalizedRequired("/CreditCard/Empty/ExpirationYear")]
         public int? ExpirationYear { get; set; }
 
         public Mediachase.Commerce.Customers.CreditCard.eCreditCardType CreditCardType { get; set; }

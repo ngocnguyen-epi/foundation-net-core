@@ -1,5 +1,6 @@
 ﻿using Foundation.AspNetCore.Features.MyAccount.ResetPassword.Models;
 using Foundation.AspNetCore.Features.Shared;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 
 namespace Foundation.AspNetCore.Features.MyAccount.ResetPassword.ViewModels
 {
@@ -11,9 +12,9 @@ namespace Foundation.AspNetCore.Features.MyAccount.ResetPassword.ViewModels
 
         public ForgotPasswordViewModel() { }
 
-        //[LocalizedDisplay("/ResetPassword/Form/Label/Email")]
-        //[LocalizedRequired("/ResetPassword/Form/Empty/Email")]
-        //[LocalizedEmail("/ResetPassword/Form/Error/InvalidEmail")]
+        [LocalizedDisplay("/ResetPassword/Form/Label/Email")]
+        [LocalizedRequired("/ResetPassword/Form/Empty/Email")]
+        [LocalizedEmail("/ResetPassword/Form/Error/InvalidEmail")]
         public string Email { get; set; }
     }
 }

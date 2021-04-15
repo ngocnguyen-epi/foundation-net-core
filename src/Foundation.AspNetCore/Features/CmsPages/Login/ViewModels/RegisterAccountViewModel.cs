@@ -1,5 +1,5 @@
-﻿using Foundation.AspNetCore.Cms.Attributes;
-using Foundation.AspNetCore.Features.MyAccount.AddressBook.Models;
+﻿using Foundation.AspNetCore.Features.MyAccount.AddressBook.Models;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 
 namespace Foundation.AspNetCore.Features.CmsPages.Login.ViewModels
 {

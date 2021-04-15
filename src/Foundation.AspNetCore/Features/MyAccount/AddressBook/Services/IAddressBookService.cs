@@ -2,7 +2,7 @@
 using Foundation.AspNetCore.Features.MyAccount.AddressBook.Models;
 using Foundation.AspNetCore.Features.MyAccount.AddressBook.ViewModels;
 using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Models;
-using Foundation.AspNetCore.Features.Shared.Commerce.Order.Models;
+using Foundation.AspNetCore.Features.Shared.Commerce.Order.ViewModels;
 using Foundation.AspNetCore.Features.Shared.Commerce.Organization.ViewModels;
 using Mediachase.Commerce.Customers;
 using System.Collections.Generic;

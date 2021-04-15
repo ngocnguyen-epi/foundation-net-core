@@ -1,5 +1,6 @@
 using Foundation.AspNetCore.Extensions;
 using Foundation.AspNetCore.Features.MyAccount.Bookmarks.Models;
+using Foundation.AspNetCore.Features.Shared.Commerce.Organization.Models;
 using Foundation.AspNetCore.Infrastructure;
 using Mediachase.BusinessFoundation.Data;
 using Mediachase.Commerce.Customers;

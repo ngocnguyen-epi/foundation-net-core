@@ -1,12 +1,12 @@
 ﻿using EPiServer.Core;
 using EPiServer.Framework.Localization;
 using EPiServer.Web.Mvc.Html;
-using Foundation.AspNetCore.Cms.Attributes;
 using Foundation.AspNetCore.Cms.Settings;
 using Foundation.AspNetCore.Features.CmsPages.Login.ViewModels;
 using Foundation.AspNetCore.Features.MyAccount.AddressBook.Services;
 using Foundation.AspNetCore.Features.Settings;
 using Microsoft.AspNetCore.Mvc;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 
 namespace Foundation.AspNetCore.Features.CmsPages.Login.Controllers
 {

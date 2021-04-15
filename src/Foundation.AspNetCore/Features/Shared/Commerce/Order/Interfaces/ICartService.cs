@@ -1,6 +1,7 @@
 using EPiServer.Commerce.Order;
 using Foundation.AspNetCore.Features.MyAccount.AddressBook.Models;
 using Foundation.AspNetCore.Features.Shared.Commerce.Order.Models;
+using Foundation.AspNetCore.Features.Shared.Commerce.Order.ViewModels;
 using Foundation.AspNetCore.Features.Shared.Commerce.Shipping.Models;
 using Mediachase.Commerce;
 using System;

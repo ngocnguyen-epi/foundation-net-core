@@ -1,5 +1,6 @@
 using Foundation.AspNetCore.Features.MyAccount.AddressBook.ViewModels;
 using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Models;
+using Foundation.AspNetCore.Infrastructure.Attributes;
 using System;
 using System.Collections.Generic;
 
@@ -24,24 +25,24 @@ namespace Foundation.AspNetCore.Features.Shared.Commerce.Organization.ViewModels
 
         public Guid AddressId { get; set; }
 
-        //[LocalizedRequired("/Shared/Address/Form/Empty/Name")]
-        //[LocalizedDisplay("/Shared/Address/Form/Label/Name")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/Name")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/Name")]
         public string Name { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/Line1")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/Line1")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/Line1")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/Line1")]
         public string Street { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/City")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/City")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/City")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/City")]
         public string City { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/PostalCode")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/PostalCode")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/PostalCode")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/PostalCode")]
         public string PostalCode { get; set; }
 
-        //[LocalizedDisplay("/Shared/Address/Form/Label/CountryCode")]
-        //[LocalizedRequired("/Shared/Address/Form/Empty/CountryCode")]
+        [LocalizedDisplay("/Shared/Address/Form/Label/CountryCode")]
+        [LocalizedRequired("/Shared/Address/Form/Empty/CountryCode")]
         public string CountryCode { get; set; }
 
         public string CountryName { get; set; }

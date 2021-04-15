@@ -2,19 +2,17 @@ using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.DataAnnotations;
 using EPiServer.Validation;
-using Foundation.AspNetCore;
-using Foundation.Features.CmsPages.LandingPages.LandingPage;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace Foundation.Features.LandingPages.TwoColumnLandingPage
+namespace Foundation.AspNetCore.Features.CmsPages.LandingPages.TwoColumnLandingPage.Models
 {
     [ContentType(DisplayName = "Two Column Landing Page",
        GUID = "F94571B0-65C4-4E49-8A88-5930D045E19D",
        Description = "Two column landing page with properties to determine column size",
        GroupName = Global.GroupNames.Content)]
     [ImageUrl("/icons/gfx/page-type-thumbnail-landingpage-twocol.png")]
-    public class TwoColumnLandingPage : LandingPage
+    public class TwoColumnLandingPage : LandingPage.Models.LandingPage
     {
         [CultureSpecific]
         [Display(Name = "Right content area", GroupName = SystemTabNames.Content, Order = 210)]

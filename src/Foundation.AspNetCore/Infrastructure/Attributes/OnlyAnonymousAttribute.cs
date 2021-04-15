@@ -2,7 +2,7 @@
 
 namespace Foundation.AspNetCore.Infrastructure.Attributes
 {
-    public class OnlyAnonymousAttribute : IAuthorizationFilter
+    public class OnlyAnonymousAttribute : ActionFilterAttribute, IAuthorizationFilter
     {
         public void OnAuthorization(AuthorizationFilterContext context)
         {

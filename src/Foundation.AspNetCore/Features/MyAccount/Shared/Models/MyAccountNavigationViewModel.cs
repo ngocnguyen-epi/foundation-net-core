@@ -4,11 +4,6 @@ using Foundation.AspNetCore.Features.Shared.Commerce.Organization.Models;
 
 namespace Foundation.AspNetCore.Features.MyAccount.Shared.Models
 {
-    public enum MyAccountPageType
-    {
-        Link,
-        Organization,
-    }
 
     public class MyAccountNavigationViewModel
     {

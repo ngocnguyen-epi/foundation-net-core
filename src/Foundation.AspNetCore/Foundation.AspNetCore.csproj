@@ -7,6 +7,7 @@
 		<PackageReference Include="EPiServer.Cms.Web" Version="12.0.0-inte-020701" />
 		<PackageReference Include="EPiServer.Commerce.Web" Version="14.0.0-inte-020424" />
 		<PackageReference Include="EPiServer.Personalization.Commerce" Version="4.0.0-inte-020424" />
+		<PackageReference Include="FileHelpers" Version="3.4.2" />
 		<PackageReference Include="Lucene.Net" Version="4.8.0-beta00012" />
 		<PackageReference Include="Lucene.Net.QueryParser" Version="4.8.0-beta00012" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
@@ -20,14 +21,28 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Remove="Features\MyAccount\OrderDetails\**" />
+	  <Compile Remove="Features\MyOrganization\QuickOrderBlock\**" />
+	  <Compile Remove="Features\MyOrganization\QuickOrderPage\**" />
+	  <Compile Remove="Features\MyOrganization\Users\**" />
 	  <Content Remove="Features\MyAccount\OrderDetails\**" />
+	  <Content Remove="Features\MyOrganization\QuickOrderBlock\**" />
+	  <Content Remove="Features\MyOrganization\QuickOrderPage\**" />
+	  <Content Remove="Features\MyOrganization\Users\**" />
 	  <EmbeddedResource Remove="Features\MyAccount\OrderDetails\**" />
+	  <EmbeddedResource Remove="Features\MyOrganization\QuickOrderBlock\**" />
+	  <EmbeddedResource Remove="Features\MyOrganization\QuickOrderPage\**" />
+	  <EmbeddedResource Remove="Features\MyOrganization\Users\**" />
 	  <None Remove="Features\MyAccount\OrderDetails\**" />
+	  <None Remove="Features\MyOrganization\QuickOrderBlock\**" />
+	  <None Remove="Features\MyOrganization\QuickOrderPage\**" />
+	  <None Remove="Features\MyOrganization\Users\**" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\BlogCommentRepository.cs" />
 	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\PageCommentRepository.cs" />
+	  <Compile Remove="Features\MyOrganization\ContactViewModel.cs" />
 	  <Compile Remove="Features\Shared\Commerce\Order\Services\CartService.cs" />
+	  <Compile Remove="Features\Shared\Commerce\Order\ViewModels\WishListMiniCartViewModel.cs" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Content Remove="wwwroot\css\components\contents\_blog-list-page.scss" />
@@ -64,5 +79,18 @@
 	  <None Include="Features\MyAccount\ResetPassword\Views\ResetPasswordConfirmation.cshtml" />
 	  <None Include="Features\MyAccount\SubscriptionDetail\Views\Index.cshtml" />
 	  <None Include="Features\MyAccount\SubscriptionHistory\Views\Index.cshtml" />
+	  <None Include="Features\MyOrganization\Budgeting\Views\AddBudget.cshtml" />
+	  <None Include="Features\MyOrganization\Budgeting\Views\AddBudgetToUser.cshtml" />
+	  <None Include="Features\MyOrganization\Budgeting\Views\EditBudget.cshtml" />
+	  <None Include="Features\MyOrganization\Budgeting\Views\EditUserBudget.cshtml" />
+	  <None Include="Features\MyOrganization\Budgeting\Views\Index.cshtml" />
+	  <None Include="Features\MyOrganization\Orders\Views\Index.cshtml" />
+	  <None Include="Features\MyOrganization\Organization\Views\AddSub.cshtml" />
+	  <None Include="Features\MyOrganization\Organization\Views\Edit.cshtml" />
+	  <None Include="Features\MyOrganization\Organization\Views\Index.cshtml" />
+	  <None Include="Features\MyOrganization\SubOrganization\Views\Edit.cshtml" />
+	  <None Include="Features\MyOrganization\SubOrganization\Views\Index.cshtml" />
+	  <None Include="Features\MyOrganization\Shared\Components\_B2BNavigation.cshtml" />
+	  <None Include="Features\MyOrganization\Shared\Views\_MyOrganizationLayout.cshtml" />
 	</ItemGroup>
 </Project>

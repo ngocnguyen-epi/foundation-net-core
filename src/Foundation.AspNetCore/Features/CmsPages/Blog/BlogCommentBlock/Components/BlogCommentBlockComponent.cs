@@ -31,8 +31,6 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Componen
         private const string BodyValidationErrorMessage = "Cannot add an empty comment.";
         private const string NameValidationErrorMessage = "Cannot add an empty name.";
         private const string EmailValidationErrorMessage = "Cannot add an empty email.";
-        private const string ErrorMessage = "Error";
-        private const string SuccessMessage = "Success";
         private const int RecordPerPage = 5;
 
         /// <summary>

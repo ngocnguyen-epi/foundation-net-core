@@ -20,7 +20,7 @@ namespace Foundation.AspNetCore.Features.CmsPages.Events.CalendarBlock.Component
         {
             var model = new ViewModels.CalendarBlockViewModel(currentBlock);
 
-            return View("~/Features/CmsPages/Events/CalendarBlock/index.cshtml", model);
+            return View("~/Features/CmsPages/Events/CalendarBlock/Views/index.cshtml", model);
         }
     }
 }

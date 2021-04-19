@@ -11,6 +11,7 @@ using Foundation.AspNetCore.Infrastructure;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
@@ -75,6 +76,10 @@ namespace Foundation.AspNetCore
             services.TryAddEnumerable(Microsoft.Extensions.DependencyInjection.ServiceDescriptor.Singleton(typeof(IFirstRequestInitializer), typeof(UsersInstaller)));
             services.AddHttpContextAccessor();
             services.AddSingleton<ISettingsService, SettingsService>();
+            services.Configure<MvcOptions>(o =>
+            {
+                o.ModelBinderProviders.Insert(0, new ModelBinderProvider());
+            });
 
             services.AddEmbeddedLocalization<Startup>();
         }

@@ -12,15 +12,16 @@ namespace Foundation.AspNetCore.Business.Rendering
     {
         private static readonly string[] AdditionalPartialViewFormats = new[]
             {
-                TemplateCoordinator.FoundationBlockFolder + "{0}.cshtml",
-                TemplateCoordinator.FoundationBlockFolder + "{1}/{0}.cshtml",
                 TemplateCoordinator.FoundationPageFolder + "{0}.cshtml",
                 TemplateCoordinator.FoundationPageFolder + "{1}/{0}.cshtml",
+                TemplateCoordinator.FoundationPageFolder + "{1}/Views/{0}.cshtml",
+                TemplateCoordinator.FoundationPageFolder + "%1/{1}/Views/{0}.cshtml",
+                TemplateCoordinator.FoundationPageFolder + "%1/Views/Default.cshtml",
+                TemplateCoordinator.FoundationBlockFolder + "{0}.cshtml",
+                TemplateCoordinator.FoundationBlockFolder + "{1}/{0}.cshtml",
                 TemplateCoordinator.FoundationSharedViewsFolder + "{0}.cshtml",
                 TemplateCoordinator.FoundationSharedViewsFolder + "{1}/{0}.cshtml",
-                TemplateCoordinator.FoundationHeaderViewsFolder + "{0}.cshtml",
-                "~/Features/%1/{1}/Views/{0}.cshtml",
-                "~/Features/%1/Views/Default.cshtml"
+                TemplateCoordinator.FoundationHeaderViewsFolder + "{0}.cshtml"
             };
 
         public IEnumerable<string> ExpandViewLocations(ViewLocationExpanderContext context, IEnumerable<string> viewLocations)

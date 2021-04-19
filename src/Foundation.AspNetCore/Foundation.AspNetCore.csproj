@@ -21,20 +21,12 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Remove="Features\MyAccount\OrderDetails\**" />
-	  <Compile Remove="Features\MyOrganization\QuickOrderBlock\**" />
-	  <Compile Remove="Features\MyOrganization\QuickOrderPage\**" />
 	  <Compile Remove="Features\MyOrganization\Users\**" />
 	  <Content Remove="Features\MyAccount\OrderDetails\**" />
-	  <Content Remove="Features\MyOrganization\QuickOrderBlock\**" />
-	  <Content Remove="Features\MyOrganization\QuickOrderPage\**" />
 	  <Content Remove="Features\MyOrganization\Users\**" />
 	  <EmbeddedResource Remove="Features\MyAccount\OrderDetails\**" />
-	  <EmbeddedResource Remove="Features\MyOrganization\QuickOrderBlock\**" />
-	  <EmbeddedResource Remove="Features\MyOrganization\QuickOrderPage\**" />
 	  <EmbeddedResource Remove="Features\MyOrganization\Users\**" />
 	  <None Remove="Features\MyAccount\OrderDetails\**" />
-	  <None Remove="Features\MyOrganization\QuickOrderBlock\**" />
-	  <None Remove="Features\MyOrganization\QuickOrderPage\**" />
 	  <None Remove="Features\MyOrganization\Users\**" />
 	</ItemGroup>
 	<ItemGroup>
@@ -88,6 +80,8 @@
 	  <None Include="Features\MyOrganization\Organization\Views\AddSub.cshtml" />
 	  <None Include="Features\MyOrganization\Organization\Views\Edit.cshtml" />
 	  <None Include="Features\MyOrganization\Organization\Views\Index.cshtml" />
+	  <None Include="Features\MyOrganization\QuickOrderBlock\Index.cshtml" />
+	  <None Include="Features\MyOrganization\QuickOrderPage\Views\Index.cshtml" />
 	  <None Include="Features\MyOrganization\SubOrganization\Views\Edit.cshtml" />
 	  <None Include="Features\MyOrganization\SubOrganization\Views\Index.cshtml" />
 	  <None Include="Features\MyOrganization\Shared\Components\_B2BNavigation.cshtml" />

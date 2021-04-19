@@ -1,7 +1,14 @@
 ﻿using EPiServer;
 using EPiServer.Commerce.Catalog.ContentTypes;
 using EPiServer.Core;
+using Foundation.AspNetCore.Features.Shared.Commerce.CatalogContent.Models;
+using Foundation.AspNetCore.Features.Shared.Commerce.Market.Interfaces;
+using Mediachase.Commerce;
+using Mediachase.Commerce.Catalog;
 using Mediachase.Commerce.InventoryService;
+using Mediachase.Commerce.Pricing;
+using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderBlock
@@ -11,17 +18,27 @@ namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderBlock
         string ValidateProduct(ContentReference variationReference, decimal quantity, string code);
         QuickOrderProductViewModel GetProductByCode(ContentReference productReference);
         decimal GetTotalInventoryByEntry(string code);
+        IEnumerable<SkuSearchResultModel> SearchSkus(string query);
     }
 
     public class QuickOrderService : IQuickOrderService
     {
         private readonly IContentLoader _contentLoader;
         private readonly IInventoryService _inventoryService;
+        private readonly ICurrentMarket _currentMarket;
+        private readonly ICurrencyService _currencyService;
+        //private readonly IClient _findClient;
+        private readonly IPriceService _priceService;
+        private readonly IPromotionService _promotionService;
 
-        public QuickOrderService(IContentLoader contentLoader, IInventoryService inventoryService)
+        public QuickOrderService(IContentLoader contentLoader, IInventoryService inventoryService, ICurrentMarket currentMarket, ICurrencyService currencyService, IPriceService priceService, IPromotionService promotionService)
         {
             _contentLoader = contentLoader;
             _inventoryService = inventoryService;
+            _currentMarket = currentMarket;
+            _currencyService = currencyService;
+            _priceService = priceService;
+            _promotionService = promotionService;
         }
 
         public string ValidateProduct(ContentReference variationReference, decimal quantity, string code)
@@ -58,5 +75,43 @@ namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderBlock
         }
 
         public decimal GetTotalInventoryByEntry(string code) => _inventoryService.QueryByEntry(new[] { code }).Sum(x => x.PurchaseAvailableQuantity);
+
+        public IEnumerable<SkuSearchResultModel> SearchSkus(string query)
+        {
+            var market = _currentMarket.GetCurrentMarket();
+            var currency = _currencyService.GetCurrentCurrency();
+
+            //var results = _findClient.Search<ProductContent>()
+            //    .Filter(_ => _.VariationModels(), x => x.Code.PrefixCaseInsensitive(query))
+            //    .FilterMarket(market)
+            //    .Filter(x => x.Language.Name.Match(_languageResolver.GetPreferredCulture().Name))
+            //    .Track()
+            //    .FilterForVisitor()
+            //    .Select(_ => _.VariationModels())
+            //    .GetResult()
+            //    .SelectMany(x => x)
+            //    .ToList();
+
+            var results = new List<VariationModel>();
+
+            if (results != null && results.Any())
+            {
+                return results.Select(variation =>
+                {
+                    var defaultPrice = _priceService.GetDefaultPrice(market.MarketId, DateTime.Now,
+                        new CatalogKey(variation.Code), currency);
+                    var discountedPrice = defaultPrice != null ? _promotionService.GetDiscountPrice(defaultPrice.CatalogKey, market.MarketId,
+                        currency) : null;
+                    return new SkuSearchResultModel
+                    {
+                        Sku = variation.Code,
+                        ProductName = string.IsNullOrEmpty(variation.Name) ? "" : variation.Name,
+                        UnitPrice = discountedPrice?.UnitPrice.Amount ?? 0,
+                        UrlImage = variation.DefaultAssetUrl
+                    };
+                });
+            }
+            return Enumerable.Empty<SkuSearchResultModel>();
+        }
     }
 }

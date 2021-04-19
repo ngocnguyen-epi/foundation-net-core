@@ -6,6 +6,7 @@ using EPiServer.Web.Mvc;
 using EPiServer.Web.Mvc.Html;
 using Foundation.AspNetCore.Cms.Settings;
 using Foundation.AspNetCore.Features.MyOrganization.QuickOrderPage.Models;
+using Foundation.AspNetCore.Features.Search.Services;
 using Foundation.AspNetCore.Features.Settings;
 using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Interfaces;
 using Foundation.AspNetCore.Features.Shared.Commerce.Order.Interfaces;
@@ -32,7 +33,6 @@ namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderBlock
         private readonly IFileHelperService _fileHelperService;
         private readonly IOrderRepository _orderRepository;
         private readonly ReferenceConverter _referenceConverter;
-        private readonly ISearchService _searchService;
         private readonly ICustomerService _customerService;
         private readonly IContentLoader _contentLoader;
         private readonly ISettingsService _settingsService;
@@ -43,7 +43,6 @@ namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderBlock
             IFileHelperService fileHelperService,
             IOrderRepository orderRepository,
             ReferenceConverter referenceConverter,
-            ISearchService searchService,
             ICustomerService customerService,
             IContentLoader contentLoader,
             ISettingsService settingsService)
@@ -53,7 +52,6 @@ namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderBlock
             _fileHelperService = fileHelperService;
             _orderRepository = orderRepository;
             _referenceConverter = referenceConverter;
-            _searchService = searchService;
             _customerService = customerService;
             _contentLoader = contentLoader;
             _settingsService = settingsService;
@@ -162,7 +160,7 @@ namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderBlock
 
         public IViewComponentResult GetSku(string query)
         {
-            var data = _searchService.SearchSkus(query);
+            var data = _quickOrderService.SearchSkus(query);
             return new ContentViewComponentResult(JsonConvert.SerializeObject(data));
         }
 

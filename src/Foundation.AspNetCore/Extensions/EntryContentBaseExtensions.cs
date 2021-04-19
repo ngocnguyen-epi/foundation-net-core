@@ -5,6 +5,7 @@ using EPiServer.Commerce.SpecializedProperties;
 using EPiServer.Core;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
+using Foundation.AspNetCore.Features.Shared.Commerce.CatalogContent.Models;
 using Foundation.AspNetCore.Features.Shared.Interfaces;
 using Mediachase.Commerce;
 using Mediachase.Commerce.Catalog;
@@ -373,6 +374,20 @@ namespace Foundation.AspNetCore.Extensions
             return ContentLoader.Value.GetItems(contentLinks.Select(x => x.Value), new LoaderOptions())
                 .OfType<EntryContentBase>()
                 .ToList();
+        }
+
+        public static IEnumerable<VariationModel> VariationModels(this ProductContent productContent)
+        {
+            return ContentLoader.Value
+                .GetItems(productContent.GetVariants(RelationRepository.Value), productContent.Language)
+                .OfType<VariationContent>()
+                .Select(x => new VariationModel
+                {
+                    Code = x.Code,
+                    LanguageId = productContent.Language.Name,
+                    Name = x.DisplayName,
+                    DefaultAssetUrl = UrlResolver.Value.GetUrl((x as IAssetContainer).CommerceMediaCollection.FirstOrDefault()?.AssetLink)
+                });
         }
     }
 }

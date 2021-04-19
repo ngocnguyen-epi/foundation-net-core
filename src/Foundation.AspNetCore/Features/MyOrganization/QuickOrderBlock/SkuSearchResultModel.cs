@@ -1,4 +1,4 @@
-namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderPage.Models
+namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderBlock
 {
     public class SkuSearchResultModel
     {

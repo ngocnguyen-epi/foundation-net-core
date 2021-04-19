@@ -5,7 +5,5 @@ namespace Foundation.AspNetCore.Features.MyOrganization.QuickOrderPage.ViewModel
 {
     public class QuickOrderPageViewModel : ContentViewModel<Models.QuickOrderPage>
     {
-        public List<ProductTileViewModel> ProductsList { get; set; }
-        public List<string> ReturnedMessages { get; set; }
     }
 }

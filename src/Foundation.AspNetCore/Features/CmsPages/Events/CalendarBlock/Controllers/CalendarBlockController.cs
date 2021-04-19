@@ -1,6 +1,7 @@
 ﻿using EPiServer;
 using EPiServer.Core;
 using Foundation.AspNetCore.Extensions;
+using Foundation.AspNetCore.Features.CmsPages.Events.CalendarBlock.Models;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System;
@@ -48,9 +49,9 @@ namespace Foundation.AspNetCore.Features.CmsPages.Events.CalendarBlock.Controlle
 
         [HttpPost]
         [Route("CalendarEvents")]
-        public ContentResult CalendarEvents(CalendarBlockId calendarBlockId)
+        public ContentResult CalendarEvents(CalendarBlockData calendarBlockData)
         {
-            var blockId = calendarBlockId.blockId;
+            var blockId = calendarBlockData.BlockId;
             var events = GetEvents(blockId);
             var result = events.Select(x => new
             {
@@ -69,9 +70,9 @@ namespace Foundation.AspNetCore.Features.CmsPages.Events.CalendarBlock.Controlle
 
         [HttpPost]
         [Route("UpcomingEvents")]
-        public ContentResult UpcomingEvents(CalendarBlockId calendarBlockId)
+        public ContentResult UpcomingEvents(CalendarBlockData calendarBlockData)
         {
-            var blockId = calendarBlockId.blockId;
+            var blockId = calendarBlockData.BlockId;
             var events = GetEvents(blockId);
             var result = events.Where(x => x.EventStartDate >= DateTime.Now)
                 .OrderBy(x => x.EventStartDate)
@@ -90,9 +91,6 @@ namespace Foundation.AspNetCore.Features.CmsPages.Events.CalendarBlock.Controlle
             };
         }
 
-        public class CalendarBlockId
-        {
-            public int blockId { get; set; }
-        }
+        
     }
 }

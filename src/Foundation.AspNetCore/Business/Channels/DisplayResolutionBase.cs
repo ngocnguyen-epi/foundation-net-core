@@ -41,9 +41,8 @@ namespace Foundation.AspNetCore.Business.Channels
 
         private string Translate(string resurceKey)
         {
-            string value;
 
-            if (!LocalizationService.Service.TryGetString(resurceKey, out value))
+            if (!LocalizationService.Service.TryGetString(resurceKey, out string value))
             {
                 value = resurceKey;
             }

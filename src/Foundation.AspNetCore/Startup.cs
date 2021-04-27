@@ -65,11 +65,7 @@ namespace Foundation.AspNetCore
             services.AddFoundation();
             services.AddCms();
             services.AddCommerce();
-
-            services.Configure<UIOptions>(uiOptions =>
-            {
-                uiOptions.UIShowGlobalizationUserInterface = true;
-            });
+            services.AddTinyMce();
 
             // Site Specific
             services.Configure<IISServerOptions>(options => options.AllowSynchronousIO = true);

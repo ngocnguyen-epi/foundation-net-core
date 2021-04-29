@@ -18,7 +18,7 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.ViewMode
         public BlogCommentsBlockViewModel(PageReference pageReference, Models.BlogCommentBlock block)
         {
             CurrentPageLink = pageReference;
-            Comments = new List<BlogComment>();
+            Comments = new List<BlogCommentModel>();
             CurrentBlock = block;
             Messages = new List<string>();
         }
@@ -30,7 +30,7 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.ViewMode
         /// <summary>
         /// Gets or sets the comments to show.
         /// </summary>
-        public IEnumerable<BlogComment> Comments { get; set; }
+        public IEnumerable<BlogCommentModel> Comments { get; set; }
 
         /// <summary>
         /// Gets and sets message details to be displayed to the user

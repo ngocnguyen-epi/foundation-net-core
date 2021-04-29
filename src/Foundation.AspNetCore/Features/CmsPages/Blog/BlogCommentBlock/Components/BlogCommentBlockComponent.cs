@@ -134,10 +134,10 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Componen
         /// </summary>
         /// <param name="formViewModel">The submitted comment form view model.</param>
         /// <returns>The added PageComment</returns>
-        private BlogComment AddComment(BlogCommentFormViewModel formViewModel)
+        private BlogCommentModel AddComment(BlogCommentFormViewModel formViewModel)
         {
             var newComment = AdaptCommentFormViewModelToSocialComment(formViewModel);
-            BlogComment addedComment = null;
+            BlogCommentModel addedComment = null;
 
             try
             {
@@ -157,9 +157,9 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Componen
         /// </summary>
         /// <param name="formViewModel">The comment form view model.</param>
         /// <returns>PageComment</returns>
-        private BlogComment AdaptCommentFormViewModelToSocialComment(BlogCommentFormViewModel formViewModel)
+        private BlogCommentModel AdaptCommentFormViewModelToSocialComment(BlogCommentFormViewModel formViewModel)
         {
-            return new BlogComment
+            return new BlogCommentModel
             {
                 Target = _pageRepository.GetPageId(formViewModel.CurrentPageLink),
                 Name = formViewModel.Name,

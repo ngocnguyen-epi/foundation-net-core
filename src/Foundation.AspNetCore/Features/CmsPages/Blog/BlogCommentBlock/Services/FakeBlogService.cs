@@ -6,15 +6,15 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Services
 {
     public class FakeCommentBlogService : IBlogCommentRepository
     {
-        public BlogComment Add(BlogComment comment)
+        public BlogCommentModel Add(BlogCommentModel comment)
         {
-            return new BlogComment();
+            return new BlogCommentModel();
         }
 
-        public IEnumerable<BlogComment> Get(PageCommentFilter filter, out long total)
+        public IEnumerable<BlogCommentModel> Get(PageCommentFilter filter, out long total)
         {
             total = 0;
-            return new List<BlogComment>();
+            return new List<BlogCommentModel>();
         }
     }
 

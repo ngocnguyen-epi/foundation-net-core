@@ -1,7 +1,7 @@
 ﻿using EPiServer;
 using EPiServer.Commerce.Catalog.ContentTypes;
 using EPiServer.Core;
-using Foundation.AspNetCore.Features.Shared.Commerce.CatalogContent.Models;
+using Foundation.AspNetCore.Features.CatalogContents.Shared.Models;
 using Foundation.AspNetCore.Features.Shared.Commerce.Market.Interfaces;
 using Mediachase.Commerce;
 using Mediachase.Commerce.Catalog;

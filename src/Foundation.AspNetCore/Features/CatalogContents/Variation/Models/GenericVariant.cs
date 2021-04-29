@@ -11,7 +11,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Foundation.AspNetCore.Features.CatalogContents.Variation.Models
 {
     [CatalogContentType(DisplayName = "Generic Variant", GUID = "1aaa2c58-c424-4c37-81b0-77e76d254eb0", Description = "Generic variant supports multiple variation types")]
-    [ImageUrl("~/assets/icons/cms/pages/cms-icon-page-23.png")]
+    [ImageUrl("/icons/cms/pages/cms-icon-page-23.png")]
     public class GenericVariant : VariationContent, IFoundationContent/*, IProductRecommendations, IDashboardItem*/
     {
         [Tokenize]

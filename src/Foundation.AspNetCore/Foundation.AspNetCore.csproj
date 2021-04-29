@@ -31,14 +31,46 @@
 		<None Include="wwwroot\**\*.*" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Compile Remove="Features\CmsPages\Stores\NewFolder\**" />
 	  <Compile Remove="Features\MyAccount\OrderDetails\**" />
 	  <Compile Remove="Features\MyOrganization\Users\**" />
+	  <Compile Remove="Features\Social\ActivityStreams\Services\**" />
+	  <Compile Remove="Features\Social\Comments\Services\**" />
+	  <Compile Remove="Features\Social\Common\**" />
+	  <Compile Remove="Features\Social\Groups\Services\**" />
+	  <Compile Remove="Features\Social\Moderation\Services\**" />
+	  <Compile Remove="Features\Social\Moderation\Views\**" />
+	  <Compile Remove="Features\Social\Ratings\Services\**" />
+	  <Content Remove="Features\CmsPages\Stores\NewFolder\**" />
 	  <Content Remove="Features\MyAccount\OrderDetails\**" />
 	  <Content Remove="Features\MyOrganization\Users\**" />
+	  <Content Remove="Features\Social\ActivityStreams\Services\**" />
+	  <Content Remove="Features\Social\Comments\Services\**" />
+	  <Content Remove="Features\Social\Common\**" />
+	  <Content Remove="Features\Social\Groups\Services\**" />
+	  <Content Remove="Features\Social\Moderation\Services\**" />
+	  <Content Remove="Features\Social\Moderation\Views\**" />
+	  <Content Remove="Features\Social\Ratings\Services\**" />
+	  <EmbeddedResource Remove="Features\CmsPages\Stores\NewFolder\**" />
 	  <EmbeddedResource Remove="Features\MyAccount\OrderDetails\**" />
 	  <EmbeddedResource Remove="Features\MyOrganization\Users\**" />
+	  <EmbeddedResource Remove="Features\Social\ActivityStreams\Services\**" />
+	  <EmbeddedResource Remove="Features\Social\Comments\Services\**" />
+	  <EmbeddedResource Remove="Features\Social\Common\**" />
+	  <EmbeddedResource Remove="Features\Social\Groups\Services\**" />
+	  <EmbeddedResource Remove="Features\Social\Moderation\Services\**" />
+	  <EmbeddedResource Remove="Features\Social\Moderation\Views\**" />
+	  <EmbeddedResource Remove="Features\Social\Ratings\Services\**" />
+	  <None Remove="Features\CmsPages\Stores\NewFolder\**" />
 	  <None Remove="Features\MyAccount\OrderDetails\**" />
 	  <None Remove="Features\MyOrganization\Users\**" />
+	  <None Remove="Features\Social\ActivityStreams\Services\**" />
+	  <None Remove="Features\Social\Comments\Services\**" />
+	  <None Remove="Features\Social\Common\**" />
+	  <None Remove="Features\Social\Groups\Services\**" />
+	  <None Remove="Features\Social\Moderation\Services\**" />
+	  <None Remove="Features\Social\Moderation\Views\**" />
+	  <None Remove="Features\Social\Ratings\Services\**" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\BlogCommentRepository.cs" />
@@ -46,15 +78,19 @@
 	  <Compile Remove="Features\MyOrganization\ContactViewModel.cs" />
 	  <Compile Remove="Features\Shared\Commerce\Order\Services\CartService.cs" />
 	  <Compile Remove="Features\Shared\Commerce\Order\ViewModels\WishListMiniCartViewModel.cs" />
+	  <Compile Remove="Features\Shared\Services\ReviewActivityService.cs" />
+	  <Compile Remove="Features\Shared\Services\ReviewService.cs" />
+	  <Compile Remove="Features\Social\Adapters\CommunityActivityAdapter.cs" />
+	  <Compile Remove="Features\Social\Adapters\CommunityMemberAdapter.cs" />
+	  <Compile Remove="Features\Social\Adapters\CommunityMembershipRequestAdapter.cs" />
+	  <Compile Remove="Features\Social\Adapters\CommunityMembershipWorkflowAdapter.cs" />
+	  <Compile Remove="Features\Social\ViewModels\ViewModelAdapter.cs" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Content Remove="wwwroot\css\components\contents\_blog-list-page.scss" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="App_Data\" />
-	  <Folder Include="Features\CatalogContents\Variation\ViewModels\" />
-	  <Folder Include="Features\CatalogContents\Variation\Views\" />
-	  <Folder Include="Features\CatalogContents\Variation\Controllers\" />
 	  <Folder Include="Features\CmsPages\Blog\BlogCommentBlock\Interfaces\" />
 	  <Folder Include="Features\Shared\Commerce\Shipping\Services\" />
 	  <Folder Include="Features\Shared\Commerce\Shipping\Interfaces\" />
@@ -97,5 +133,6 @@
 	  <None Include="Features\MyOrganization\SubOrganization\Views\Index.cshtml" />
 	  <None Include="Features\MyOrganization\Shared\Components\_B2BNavigation.cshtml" />
 	  <None Include="Features\MyOrganization\Shared\Views\_MyOrganizationLayout.cshtml" />
+	  <None Include="Features\Social\Moderation\_viewstart.cshtml" />
 	</ItemGroup>
 </Project>

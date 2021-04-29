@@ -5,7 +5,7 @@ using EPiServer.Commerce.SpecializedProperties;
 using EPiServer.Core;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
-using Foundation.AspNetCore.Features.Shared.Commerce.CatalogContent.Models;
+using Foundation.AspNetCore.Features.CatalogContents.Shared.Models;
 using Foundation.AspNetCore.Features.Shared.Interfaces;
 using Mediachase.Commerce;
 using Mediachase.Commerce.Catalog;

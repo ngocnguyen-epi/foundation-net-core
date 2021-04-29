@@ -1,4 +1,4 @@
-﻿namespace Foundation.AspNetCore.Features.Shared.Commerce.CatalogContent.Models
+﻿namespace Foundation.AspNetCore.Features.CatalogContents.Shared.Models
 {
     public class VariationModel
     {

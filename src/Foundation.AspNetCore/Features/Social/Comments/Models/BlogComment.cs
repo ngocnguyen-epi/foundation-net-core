@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Models
+namespace Foundation.AspNetCore.Features.Social.Services.Comments.Models
 {
     public class BlogComment
     {

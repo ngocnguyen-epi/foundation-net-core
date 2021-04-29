@@ -14,13 +14,13 @@ namespace Foundation.AspNetCore.Features.CmsPages.Blog.BlogCommentBlock.Interfac
         /// </summary>
         /// <param name="comment">The comment to add.</param>
         /// <returns>The added comment.</returns>
-        BlogComment Add(BlogComment comment);
+        BlogCommentModel Add(BlogCommentModel comment);
 
         /// <summary>
         /// Gets comments from the underlying comment repository based on a filter.
         /// </summary>
         /// <param name="filter"></param>
         /// <returns>A list of comments.</returns>
-        IEnumerable<BlogComment> Get(PageCommentFilter filter, out long total);
+        IEnumerable<BlogCommentModel> Get(PageCommentFilter filter, out long total);
     }
 }

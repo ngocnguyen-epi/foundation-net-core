@@ -9,7 +9,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Foundation.Commerce.Extensions
+namespace Foundation.AspNetCore.Extensions
 {
     public static class AssetContainerExtensions
     {

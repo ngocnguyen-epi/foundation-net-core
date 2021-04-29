@@ -1,14 +1,12 @@
 ﻿using EPiServer;
 using EPiServer.Commerce.Catalog.ContentTypes;
 using EPiServer.Core;
-using EPiServer.Framework.Blobs;
 using EPiServer.Framework.DataAnnotations;
 using EPiServer.Web.Mvc;
 using EPiServer.Web.Routing;
-using Foundation.Commerce.Extensions;
+using Foundation.AspNetCore.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 
 namespace Foundation.Features.Blocks.AssetsDownloadLinksBlock.Component

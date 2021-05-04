@@ -15,6 +15,10 @@ else
                     <div class="top-header__banner-text">
                         @*@Html.PropertyFor(x => x.LayoutSettings.BannerText)*@
                     </div>
+                    @if (Model.ShowCommerceControls)
+                    {
+                        @(await Component.InvokeAsync("Markets", new { contentLink = ViewContext.HttpContext.GetContentLink() }))
+                    }
                     @if (!User.Identity.IsAuthenticated)
                     {
                         <div class="login-button">

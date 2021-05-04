@@ -21,6 +21,8 @@
 		<PackageReference Include="FileHelpers" Version="3.4.2" />
 		<PackageReference Include="Lucene.Net" Version="4.8.0-beta00012" />
 		<PackageReference Include="Lucene.Net.QueryParser" Version="4.8.0-beta00012" />
+		<PackageReference Include="Microsoft.AspNet.Identity.Owin" Version="2.2.3" />
+		<PackageReference Include="Microsoft.Owin" Version="4.1.1" />
 		<PackageReference Include="System.Configuration.ConfigurationManager" Version="5.0.0" />
 		<PackageReference Include="Wangkanai.Detection" Version="2.0.1" />
 	</ItemGroup>
@@ -88,12 +90,15 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Content Remove="wwwroot\css\components\contents\_blog-list-page.scss" />
+	  <Content Remove="wwwroot\css\components\contents\_market_selector.scss" />
+	  <Content Remove="wwwroot\js\features\market.js" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="App_Data\" />
 	  <Folder Include="Features\CmsPages\Blog\BlogCommentBlock\Interfaces\" />
 	  <Folder Include="Features\Shared\Commerce\Shipping\Services\" />
 	  <Folder Include="Features\Shared\Commerce\Shipping\Interfaces\" />
+	  <Folder Include="Commerce\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <None Include="Features\Blocks\OrderHistoryBlock\Index.cshtml" />

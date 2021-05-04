@@ -1,5 +1,6 @@
 ﻿using EPiServer.Core;
 using EPiServer.Globalization;
+using EPiServer.ServiceLocation;
 using Foundation.Cms;
 using Mediachase.Commerce;
 using System.Collections.Generic;
@@ -8,6 +9,7 @@ using System.Linq;
 
 namespace Foundation.AspNetCore.Features.Shared.Commerce.Market.Services
 {
+    [ServiceConfiguration]
     public class LanguageService : IUpdateCurrentLanguage
     {
         private const string LanguageCookie = "Language";

@@ -1,4 +1,5 @@
-﻿using EPiServer.Web;
+﻿using EPiServer.ServiceLocation;
+using EPiServer.Web;
 using Foundation.AspNetCore.Business;
 using Foundation.AspNetCore.Business.Channels;
 using Foundation.AspNetCore.Business.Rendering;

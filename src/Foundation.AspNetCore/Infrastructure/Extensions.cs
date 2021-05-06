@@ -1,4 +1,6 @@
 ﻿using EPiServer;
+using EPiServer.Commerce.Catalog.ContentTypes;
+using EPiServer.Commerce.Order;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
 using EPiServer.Enterprise;
@@ -8,8 +10,12 @@ using EPiServer.ServiceLocation;
 using EPiServer.Web;
 using EPiServer.Web.Routing;
 using Foundation.AspNetCore.Cms.Settings;
+using Foundation.AspNetCore.Extensions;
+using Foundation.AspNetCore.Features.CatalogContents.Variation.Models;
 using Foundation.AspNetCore.Features.CmsPages.Folder;
 using Foundation.AspNetCore.Features.CmsPages.Home;
+using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Interfaces;
+using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -188,6 +194,14 @@ namespace Foundation.AspNetCore.Infrastructure
                     languageBranchRepository.Save(languageBranch);
                 }
             }
+        }
+
+        public static ContactViewModel GetContactViewModelById(this ICustomerService customerService, string id) => new ContactViewModel(customerService.GetContactById(id));
+
+        public static bool IsVirtualVariant(this ILineItem lineItem)
+        {
+            var entry = lineItem.GetEntryContent<EntryContentBase>() as GenericVariant;
+            return entry != null && entry.VirtualProductMode != null && !string.IsNullOrWhiteSpace(entry.VirtualProductMode) && !entry.VirtualProductMode.Equals("None");
         }
     }
 }

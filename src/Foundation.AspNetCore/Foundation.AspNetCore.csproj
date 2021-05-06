@@ -32,8 +32,16 @@
 	</ItemGroup>
 	<ItemGroup>
 	  <Compile Remove="Features\CmsPages\Stores\NewFolder\**" />
-	  <Compile Remove="Features\MyAccount\OrderDetails\**" />
 	  <Compile Remove="Features\MyOrganization\Users\**" />
+	  <Compile Remove="Features\NamedCarts\DefaultCart\Controllers\**" />
+	  <Compile Remove="Features\NamedCarts\DefaultCart\Views\**" />
+	  <Compile Remove="Features\NamedCarts\OrderPadsPage\Controllers\**" />
+	  <Compile Remove="Features\NamedCarts\OrderPadsPage\Views\**" />
+	  <Compile Remove="Features\NamedCarts\SharedCart\Controllers\**" />
+	  <Compile Remove="Features\NamedCarts\SharedCart\Views\**" />
+	  <Compile Remove="Features\NamedCarts\Wishlist\Controllers\**" />
+	  <Compile Remove="Features\NamedCarts\Wishlist\Views\**" />
+	  <Compile Remove="Features\Shared\Commerce\Payment\PaymentGateways\**" />
 	  <Compile Remove="Features\Social\ActivityStreams\Services\**" />
 	  <Compile Remove="Features\Social\Comments\Services\**" />
 	  <Compile Remove="Features\Social\Common\**" />
@@ -42,8 +50,16 @@
 	  <Compile Remove="Features\Social\Moderation\Views\**" />
 	  <Compile Remove="Features\Social\Ratings\Services\**" />
 	  <Content Remove="Features\CmsPages\Stores\NewFolder\**" />
-	  <Content Remove="Features\MyAccount\OrderDetails\**" />
 	  <Content Remove="Features\MyOrganization\Users\**" />
+	  <Content Remove="Features\NamedCarts\DefaultCart\Controllers\**" />
+	  <Content Remove="Features\NamedCarts\DefaultCart\Views\**" />
+	  <Content Remove="Features\NamedCarts\OrderPadsPage\Controllers\**" />
+	  <Content Remove="Features\NamedCarts\OrderPadsPage\Views\**" />
+	  <Content Remove="Features\NamedCarts\SharedCart\Controllers\**" />
+	  <Content Remove="Features\NamedCarts\SharedCart\Views\**" />
+	  <Content Remove="Features\NamedCarts\Wishlist\Controllers\**" />
+	  <Content Remove="Features\NamedCarts\Wishlist\Views\**" />
+	  <Content Remove="Features\Shared\Commerce\Payment\PaymentGateways\**" />
 	  <Content Remove="Features\Social\ActivityStreams\Services\**" />
 	  <Content Remove="Features\Social\Comments\Services\**" />
 	  <Content Remove="Features\Social\Common\**" />
@@ -52,8 +68,16 @@
 	  <Content Remove="Features\Social\Moderation\Views\**" />
 	  <Content Remove="Features\Social\Ratings\Services\**" />
 	  <EmbeddedResource Remove="Features\CmsPages\Stores\NewFolder\**" />
-	  <EmbeddedResource Remove="Features\MyAccount\OrderDetails\**" />
 	  <EmbeddedResource Remove="Features\MyOrganization\Users\**" />
+	  <EmbeddedResource Remove="Features\NamedCarts\DefaultCart\Controllers\**" />
+	  <EmbeddedResource Remove="Features\NamedCarts\DefaultCart\Views\**" />
+	  <EmbeddedResource Remove="Features\NamedCarts\OrderPadsPage\Controllers\**" />
+	  <EmbeddedResource Remove="Features\NamedCarts\OrderPadsPage\Views\**" />
+	  <EmbeddedResource Remove="Features\NamedCarts\SharedCart\Controllers\**" />
+	  <EmbeddedResource Remove="Features\NamedCarts\SharedCart\Views\**" />
+	  <EmbeddedResource Remove="Features\NamedCarts\Wishlist\Controllers\**" />
+	  <EmbeddedResource Remove="Features\NamedCarts\Wishlist\Views\**" />
+	  <EmbeddedResource Remove="Features\Shared\Commerce\Payment\PaymentGateways\**" />
 	  <EmbeddedResource Remove="Features\Social\ActivityStreams\Services\**" />
 	  <EmbeddedResource Remove="Features\Social\Comments\Services\**" />
 	  <EmbeddedResource Remove="Features\Social\Common\**" />
@@ -62,8 +86,16 @@
 	  <EmbeddedResource Remove="Features\Social\Moderation\Views\**" />
 	  <EmbeddedResource Remove="Features\Social\Ratings\Services\**" />
 	  <None Remove="Features\CmsPages\Stores\NewFolder\**" />
-	  <None Remove="Features\MyAccount\OrderDetails\**" />
 	  <None Remove="Features\MyOrganization\Users\**" />
+	  <None Remove="Features\NamedCarts\DefaultCart\Controllers\**" />
+	  <None Remove="Features\NamedCarts\DefaultCart\Views\**" />
+	  <None Remove="Features\NamedCarts\OrderPadsPage\Controllers\**" />
+	  <None Remove="Features\NamedCarts\OrderPadsPage\Views\**" />
+	  <None Remove="Features\NamedCarts\SharedCart\Controllers\**" />
+	  <None Remove="Features\NamedCarts\SharedCart\Views\**" />
+	  <None Remove="Features\NamedCarts\Wishlist\Controllers\**" />
+	  <None Remove="Features\NamedCarts\Wishlist\Views\**" />
+	  <None Remove="Features\Shared\Commerce\Payment\PaymentGateways\**" />
 	  <None Remove="Features\Social\ActivityStreams\Services\**" />
 	  <None Remove="Features\Social\Comments\Services\**" />
 	  <None Remove="Features\Social\Common\**" />
@@ -73,11 +105,15 @@
 	  <None Remove="Features\Social\Ratings\Services\**" />
 	</ItemGroup>
 	<ItemGroup>
+	  <Compile Remove="Features\CheckoutFeatures\Services\IShippingService.cs" />
+	  <Compile Remove="Features\CheckoutFeatures\Services\ShipmentViewModelFactory.cs" />
+	  <Compile Remove="Features\CheckoutFeatures\Services\ShippingMethodInfo.cs" />
+	  <Compile Remove="Features\CheckoutFeatures\Services\ShippingService.cs" />
 	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\BlogCommentRepository.cs" />
 	  <Compile Remove="Features\CmsPages\Blog\BlogCommentBlock\Services\PageCommentRepository.cs" />
 	  <Compile Remove="Features\MyOrganization\ContactViewModel.cs" />
+	  <Compile Remove="Features\Shared\Commerce\Order\Models\SharedMiniCartViewModel.cs" />
 	  <Compile Remove="Features\Shared\Commerce\Order\Services\CartService.cs" />
-	  <Compile Remove="Features\Shared\Commerce\Order\ViewModels\WishListMiniCartViewModel.cs" />
 	  <Compile Remove="Features\Shared\Services\ReviewActivityService.cs" />
 	  <Compile Remove="Features\Shared\Services\ReviewService.cs" />
 	  <Compile Remove="Features\Social\Adapters\CommunityActivityAdapter.cs" />
@@ -108,6 +144,10 @@
 	  <None Include="Features\MyAccount\OrderConfirmation\Views\_CashOnDeliveryConfirmation.cshtml" />
 	  <None Include="Features\MyAccount\OrderConfirmation\Views\_GenericCreditCardConfirmation.cshtml" />
 	  <None Include="Features\MyAccount\OrderConfirmation\Views\_GiftCardPaymentConfirmation.cshtml" />
+	  <None Include="Features\MyAccount\OrderDetails\Views\Index.cshtml" />
+	  <None Include="Features\MyAccount\OrderDetails\Views\_Discounts.cshtml" />
+	  <None Include="Features\MyAccount\OrderDetails\Views\_ItemTemplate.cshtml" />
+	  <None Include="Features\MyAccount\OrderDetails\Views\_QuoteNotes.cshtml" />
 	  <None Include="Features\MyAccount\OrderHistory\Views\Detail.cshtml" />
 	  <None Include="Features\MyAccount\OrderHistory\Views\Index.cshtml" />
 	  <None Include="Features\MyAccount\OrderHistory\Views\_OrderFilterBox.cshtml" />

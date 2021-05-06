@@ -8,7 +8,7 @@ using Mediachase.Commerce.Customers;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Foundation.AspNetCore.Features.Shared.Commerce.Payment
+namespace Foundation.AspNetCore.Features.Shared.Commerce.Payment.Services
 {
     public class PaymentMethodViewModelFactory
     {

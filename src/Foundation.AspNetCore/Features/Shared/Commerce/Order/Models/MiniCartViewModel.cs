@@ -1,5 +1,5 @@
 using EPiServer.Core;
-using Foundation.AspNetCore.Features.Shared.Commerce.Shipping.Models;
+using Foundation.AspNetCore.Features.Shared.Commerce.Shipping.ViewModels;
 using Mediachase.Commerce;
 using System.Collections.Generic;
 

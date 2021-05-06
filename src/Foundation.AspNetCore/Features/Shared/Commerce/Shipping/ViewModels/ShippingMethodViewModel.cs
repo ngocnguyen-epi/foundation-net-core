@@ -1,7 +1,7 @@
 using Mediachase.Commerce;
 using System;
 
-namespace Foundation.AspNetCore.Features.Shared.Commerce.Shipping.Models
+namespace Foundation.AspNetCore.Features.Shared.Commerce.Shipping.ViewModels
 {
     public class ShippingMethodViewModel
     {

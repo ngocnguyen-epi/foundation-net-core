@@ -1,6 +1,7 @@
 ﻿using EPiServer.DataAnnotations;
 using Foundation.AspNetCore.Cms.Settings;
 using System.ComponentModel.DataAnnotations;
+using static Foundation.AspNetCore.Global;
 
 namespace Foundation.AspNetCore.Features.Settings
 {
@@ -12,9 +13,20 @@ namespace Foundation.AspNetCore.Features.Settings
         [CultureSpecific]
         [Display(Name = "My account", GroupName = Global.TabNames.SiteLabels, Order = 10)]
         public virtual string MyAccountLabel { get; set; }
+        [CultureSpecific]
+        [Display(Name = "Shopping cart", GroupName = TabNames.SiteLabels, Order = 20)]
+        public virtual string CartLabel { get; set; }
 
         [CultureSpecific]
         [Display(Name = "Search", GroupName = Global.TabNames.SiteLabels, Order = 30)]
         public virtual string SearchLabel { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Wishlist", GroupName = TabNames.SiteLabels, Order = 40)]
+        public virtual string WishlistLabel { get; set; }
+
+        [CultureSpecific]
+        [Display(Name = "Shared cart", GroupName = TabNames.SiteLabels, Order = 50)]
+        public virtual string SharedCartLabel { get; set; }
     }
 }

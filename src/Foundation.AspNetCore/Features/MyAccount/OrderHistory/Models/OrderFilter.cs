@@ -1,4 +1,4 @@
-﻿using Foundation.AspNetCore.Features.Shared.Commerce.Payment;
+﻿using Foundation.AspNetCore.Features.Shared.Commerce.Payment.Services;
 using Mediachase.Commerce.Orders;
 using System;
 using System.Collections.Generic;

@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Foundation.AspNetCore.Features.Shared.Commerce.Shipping.Models
+namespace Foundation.AspNetCore.Features.Shared.Commerce.Shipping.ViewModels
 {
     public class ShipmentViewModel
     {

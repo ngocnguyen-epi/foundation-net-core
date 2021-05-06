@@ -13,7 +13,7 @@ using Foundation.AspNetCore.Features.MyAccount.OrderHistory.ViewModels;
 using Foundation.AspNetCore.Features.Settings;
 using Foundation.AspNetCore.Features.Shared.Commerce.Customer.Interfaces;
 using Foundation.AspNetCore.Features.Shared.Commerce.Order.Interfaces;
-using Foundation.AspNetCore.Features.Shared.Commerce.Payment;
+using Foundation.AspNetCore.Features.Shared.Commerce.Payment.Services;
 using Foundation.AspNetCore.Features.Shared.Interfaces;
 using Mediachase.Commerce.Orders;
 using Mediachase.Commerce.Orders.Managers;
